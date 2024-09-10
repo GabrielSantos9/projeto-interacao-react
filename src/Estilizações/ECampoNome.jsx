@@ -1,23 +1,35 @@
 import styled from "styled-components";
-import imagemTeste from "../img/person1.svg";
+import iconeUsuario from "../img/person1.svg";
+import nomeSVG from "../img/NomeSVG.svg";
 
 export const CampoNome = styled.div`
-  width: 390px;
-  height: 298px;
   display: flex;
   background-color: hsl(0deg 0% 0% / 29%);
   border-radius: 10px;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 64px 36px 70px 36px;
+  position: relative;
+`;
+
+export const SvgNome = styled.img`
+  width: 126px;
+  height: 52px;
+
+  background-image: url(${nomeSVG});
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -33px;
 `;
 
 export const LabelNome = styled.label`
   color: #f5f5f5;
   font-weight: 500;
-  font-size: 15px;
-  margin: 64px 36px 6px 36px;
+  font-size: 18px;
   display: flex;
-  margin-left: -200px;
+  margin-left: -275px;
 `;
 
 export const InputWrapper = styled.div`
@@ -29,33 +41,34 @@ export const Icon = styled.img`
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
 `;
 
 export const PreencherNome = styled.input`
-  width: 268px;
-  height: 20px;
+  width: 320px;
+  height: 30px;
   padding: 10px 10px 10px 40px;
   border-radius: 4px;
   outline: none;
   background-color: hsl(0deg 0% 16% / 70%);
   color: white;
+  margin-top: 6px;
 `;
 
 export const SearchInput = () => (
   <InputWrapper>
-    <Icon src={imagemTeste} alt="search icon" />
+    <Icon src={iconeUsuario} alt="search icon" />
     <PreencherNome></PreencherNome>
   </InputWrapper>
 );
 
 export const BotaoProximo = styled.p`
-  width: 318px;
-  height: 40px;
+  width: 370px;
+  height: 50px;
   display: flex;
   color: white;
-  font-size: 18px;
+  font-size: 21px;
   font-weight: 700;
   margin-top: 60px;
   align-items: center;

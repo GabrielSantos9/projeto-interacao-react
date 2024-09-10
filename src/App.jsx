@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Introducao from "../src/Componentes/Introducao";
-import FormNome from "../src/Componentes/CampoNome"
+import FormNome from "../src/Componentes/CampoNome";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -9,6 +9,10 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   margin: 0;
   box-sizing: content-box;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -28,8 +32,10 @@ const ConteudoGeral = styled.div`
 
 const ConteudoPrincipal = styled.div`
   display: flex;
-  width: 992px;
-  height: 334px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 `;
 
 const App = () => {
