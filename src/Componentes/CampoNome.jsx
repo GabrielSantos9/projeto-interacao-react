@@ -1,8 +1,7 @@
 import {
   CampoNome,
-  SvgNome,
   LabelNome,
-  PreencherNome,
+  SvgNome,
   BotaoProximo,
   SearchInput,
 } from "../Estilizações/ECampoNome";

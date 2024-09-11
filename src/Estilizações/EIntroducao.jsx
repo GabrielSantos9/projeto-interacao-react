@@ -5,26 +5,25 @@ export const Intro = styled.div`
   height: 334px;
   display: flex;
   flex-direction: column;
-  margin-right: 179px;
+  margin-right: 129px;
   justify-content: center;
 `;
 
 export const Titulo = styled.h1`
-  width: 493px;
   color: white;
   display: flex;
   font-weight: bold;
-  font-size: 47px;
+  font-size: 40px;
   flex-direction: column;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 `;
 
 export const Paragrafo = styled.p`
   color: white;
-  font-size: 27px;
+  font-size: 23px;
   font-weight: 500;
-  width: 440px;
+  width: 379px;
 `;
 
 export const CorReact = styled.span`

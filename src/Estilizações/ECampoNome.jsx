@@ -13,23 +13,12 @@ export const CampoNome = styled.div`
   position: relative;
 `;
 
-export const SvgNome = styled.img`
-  width: 126px;
-  height: 52px;
-
-  background-image: url(${nomeSVG});
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: -33px;
-`;
-
 export const LabelNome = styled.label`
   color: #f5f5f5;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 15px;
   display: flex;
-  margin-left: -275px;
+  margin-left: -240px;
 `;
 
 export const InputWrapper = styled.div`
@@ -41,19 +30,8 @@ export const Icon = styled.img`
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  width: 25px;
-  height: 25px;
-`;
-
-export const PreencherNome = styled.input`
-  width: 320px;
-  height: 30px;
-  padding: 10px 10px 10px 40px;
-  border-radius: 4px;
-  outline: none;
-  background-color: hsl(0deg 0% 16% / 70%);
-  color: white;
-  margin-top: 6px;
+  width: 20px;
+  height: 20px;
 `;
 
 export const SearchInput = () => (
@@ -63,12 +41,32 @@ export const SearchInput = () => (
   </InputWrapper>
 );
 
+export const SVG = styled.img`
+  position: absolute;
+  width: 126px;
+  height: 52px;
+  top: -33px;
+`;
+
+export const SvgNome = () => <SVG src={nomeSVG} alt="teste1"></SVG>;
+
+export const PreencherNome = styled.input`
+  width: 318px;
+  height: 40px;
+  padding: 10px 10px 10px 40px;
+  border-radius: 4px;
+  outline: none;
+  background-color: hsl(0deg 0% 16% / 70%);
+  color: white;
+  margin-top: 6px;
+`;
+
 export const BotaoProximo = styled.p`
-  width: 370px;
-  height: 50px;
+  width: 318px;
+  height: 40px;
   display: flex;
   color: white;
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 700;
   margin-top: 60px;
   align-items: center;
