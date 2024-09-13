@@ -2,7 +2,7 @@ import styled from "styled-components";
 import iconeUsuario from "../img/person1.svg";
 import nomeSVG from "../img/NomeSVG.svg";
 
-export const CampoNome = styled.div`
+export const CampoNome = styled.form`
   display: flex;
   background-color: hsl(0deg 0% 0% / 29%);
   border-radius: 10px;
@@ -34,7 +34,7 @@ export const Icon = styled.img`
   height: 20px;
 `;
 
-export const SearchInput = () => (
+export const PreencherInput = () => (
   <InputWrapper>
     <Icon src={iconeUsuario} alt="search icon" />
     <PreencherNome></PreencherNome>
@@ -61,7 +61,17 @@ export const PreencherNome = styled.input`
   margin-top: 6px;
 `;
 
-export const BotaoProximo = styled.p`
+export const PreencherTeste = styled.input`
+  width: 318px;
+  height: 40px;
+  border-radius: 4px;
+  outline: none;
+  background-color: hsl(0deg 0% 16% / 70%);
+  color: white;
+  margin-top: 6px;
+`;
+
+export const BotaoProximo = styled.button`
   width: 318px;
   height: 40px;
   display: flex;
