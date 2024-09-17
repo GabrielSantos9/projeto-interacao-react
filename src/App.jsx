@@ -2,6 +2,7 @@ import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Introducao from "../src/Componentes/Introducao";
 import FormNome from "../src/Componentes/CampoNome";
+import CampoQuestoes from "./Componentes/CampoQuestoes";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -43,6 +44,7 @@ const App = () => {
           <Introducao />
           <FormNome />
         </ConteudoPrincipal>
+        <CampoQuestoes></CampoQuestoes>
       </ConteudoGeral>
     </>
   );
