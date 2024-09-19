@@ -1,57 +1,90 @@
 import React from "react";
-import { Questao, FormQuestao, BotaoProximo } from "../Estilizações/ECampoQuestoes";
+import {
+  Questao,
+  FormQuestao,
+  BotaoProximo,
+} from "../Estilizações/ECampoQuestoes";
 
 const perguntas = [
   {
-    pergunta: 'Qual método é utilizado para criar componentes?',
+    pergunta: "Qual método é utilizado para criar componentes?",
     options: [
-      'React.makeComponent()',
-      'React.createComponent()',
-      'React.createElement()',
+      "React.makeComponent()",
+      "React.createComponent()",
+      "React.createElement()",
     ],
-    resposta: 'React.createElement()',
-    id: 'p1',
+    resposta: "React.createElement()",
+    id: "p1",
   },
   {
-    pergunta: 'Como importamos um componente externo?',
+    pergunta: "Como importamos um componente externo?",
     options: [
       'import Component from "./Component"',
       'require("./Component")',
       'import "./Component"',
     ],
     resposta: 'import Component from "./Component"',
-    id: 'p2',
+    id: "p2",
   },
   {
-    pergunta: 'Qual hook não é nativo?',
-    options: ['useEffect()', 'useFetch()', 'useCallback()'],
-    resposta: 'useFetch()',
-    id: 'p3',
+    pergunta: "Qual hook não é nativo?",
+    options: ["useEffect()", "useFetch()", "useCallback()"],
+    resposta: "useFetch()",
+    id: "p3",
   },
   {
-    pergunta: 'Qual palavra deve ser utilizada para criarmos um hook?',
-    options: ['set', 'get', 'use'],
-    resposta: 'use',
-    id: 'p4',
+    pergunta: "Qual palavra deve ser utilizada para criarmos um hook?",
+    options: ["set", "get", "use"],
+    resposta: "use",
+    id: "p4",
   },
 ];
 
-
 const CampoQuestoes = () => {
   const [respostas, setRespostas] = React.useState({
-    p1: '',
-    p2: '',
-    p3: '',
-    p4: '',
-  })
-  
+    p1: "",
+    p2: "",
+    p3: "",
+    p4: "",
+  });
+
+  const [slide, setSlide] = React.useState(0);
+  const [resultadoFinal, setResultadoFinal] = React.useState(null);
+
+  function handleChange({ target }) {
+    setRespostas({ ...respostas, [target.id]: target.value });
+  }
+
+  function resultado() {
+    const corretas = perguntas.filter(
+      ({id, resposta}) => respostas[id] === resposta,
+    )
+    setResultadoFinal(`Você acertou: ${corretas.length} de ${perguntas.length}`)
+    console.log(corretas);
+  }
+
+  function handleClick() {
+    if (slide < perguntas.length - 1) {
+      setSlide(slide + 1);
+    } else {
+      resultado();
+    }
+  }
+
   return (
     <>
-      <FormQuestao>
-        {perguntas.map((pergunta) => (
-          <Questao {...pergunta}/>
+      <FormQuestao onSubmit={(event) => event.preventDefault()}>
+        {perguntas.map((pergunta, index) => (
+          <Questao
+            active={slide === index}
+            key={pergunta.id}
+            value={respostas[pergunta.id]}
+            onChange={handleChange}
+            {...pergunta}
+          />
         ))}
-        <BotaoProximo>próximo</BotaoProximo>
+        {resultadoFinal && <p>{resultadoFinal}</p>}
+        <BotaoProximo onClick={handleClick}>próximo</BotaoProximo>
       </FormQuestao>
     </>
   );

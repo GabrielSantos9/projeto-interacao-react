@@ -6,6 +6,7 @@ export const FormQuestao = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rebeccapurple;
 `;
 
 export const Fieldset = styled.fieldset`
@@ -42,16 +43,25 @@ export const BotaoProximo = styled.button`
 
 import React from "react";
 
-export const Questao = ({pergunta, options, id}) => {
+export const Questao = ({ pergunta, options, onChange, value, id, active}) => {
+
+  if (active === false) return null;
   return (
-      <Fieldset>
-        <Legend>{pergunta}</Legend>
-        {options.map((option) => (
-          <label key={option} style={{marginBottom: '1rem', margin:'flex'}}>
-            <input type="radio" value={option} />
-          </label>
-        ))}
-      </Fieldset>
+    <Fieldset>
+      <Legend>{pergunta}</Legend>
+      {options.map((option) => (
+        <label key={option} style={{ marginBottom: "1rem", margin: "flex" }}>
+          <input
+            type="radio"
+            id={id}
+            checked={value === option}
+            value={option}
+            onChange={onChange}
+          />
+          {option}
+        </label>
+      ))}
+    </Fieldset>
   );
 };
 
