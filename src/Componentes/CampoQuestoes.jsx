@@ -57,9 +57,11 @@ const CampoQuestoes = () => {
 
   function resultado() {
     const corretas = perguntas.filter(
-      ({id, resposta}) => respostas[id] === resposta,
-    )
-    setResultadoFinal(`Você acertou: ${corretas.length} de ${perguntas.length}`)
+      ({ id, resposta }) => respostas[id] === resposta
+    );
+    setResultadoFinal(
+      `Você acertou: ${corretas.length} de ${perguntas.length}`
+    );
     console.log(corretas);
   }
 
@@ -67,6 +69,7 @@ const CampoQuestoes = () => {
     if (slide < perguntas.length - 1) {
       setSlide(slide + 1);
     } else {
+      setSlide(slide + 1);
       resultado();
     }
   }
@@ -83,8 +86,11 @@ const CampoQuestoes = () => {
             {...pergunta}
           />
         ))}
-        {resultadoFinal && <p>{resultadoFinal}</p>}
-        <BotaoProximo onClick={handleClick}>próximo</BotaoProximo>
+        {resultadoFinal ? (
+          <p>{resultadoFinal}</p>
+        ) : (
+          <BotaoProximo onClick={handleClick}>próximo</BotaoProximo>
+        )}
       </FormQuestao>
     </>
   );
