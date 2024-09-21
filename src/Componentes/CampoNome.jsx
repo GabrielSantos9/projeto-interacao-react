@@ -7,7 +7,7 @@ import {
   PreencherInput,
 } from "../Estilizações/ECampoNome";
 
-const FormNome = () => {
+const FormNome = ({ onNext }) => {
   const [campoNome, setCampoNome] = React.useState({
     nome:'',
   });
@@ -34,7 +34,7 @@ const FormNome = () => {
         onChange={handleChange}
       />
       {campoNome.nome}
-      <BotaoProximo>próximo</BotaoProximo>
+      <BotaoProximo type="button" onClick={onNext} >próximo</BotaoProximo>
     </CampoNome>
   );
 };

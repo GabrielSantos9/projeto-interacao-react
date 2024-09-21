@@ -36,10 +36,10 @@ const ConteudoPrincipal = styled.div`
 `;
 
 const App = () => {
-  const [step, setStep] = useState(0);
+  const [showCampoQuestoes, setShowCampoQuestoes] = useState(false);
 
-  const handleNext = () => {
-    setStep(1);
+  const handleNextClick = () => {
+    setShowCampoQuestoes(true);
   };
   return (
     <>
@@ -47,9 +47,9 @@ const App = () => {
       <ConteudoGeral>
         <ConteudoPrincipal>
           <Introducao />
-          <FormNome />
+          <FormNome onNext={handleNextClick}/>
         </ConteudoPrincipal>
-        <CampoQuestoes></CampoQuestoes>
+        {showCampoQuestoes && <CampoQuestoes> {/* Conteúdo do CampoQuestoes */} </CampoQuestoes>}
       </ConteudoGeral>
     </>
   );
