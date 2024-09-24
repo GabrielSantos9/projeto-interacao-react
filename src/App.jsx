@@ -46,10 +46,10 @@ const App = () => {
       <GlobalStyle />
       <ConteudoGeral>
         <ConteudoPrincipal>
-          <Introducao />
-          <FormNome onNext={handleNextClick}/>
+        {!showCampoQuestoes && <Introducao />}
+        {!showCampoQuestoes && <FormNome onNext={handleNextClick} />}
+        {showCampoQuestoes && <CampoQuestoes/>}
         </ConteudoPrincipal>
-        {showCampoQuestoes && <CampoQuestoes> {/* Conteúdo do CampoQuestoes */} </CampoQuestoes>}
       </ConteudoGeral>
     </>
   );

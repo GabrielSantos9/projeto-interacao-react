@@ -5,8 +5,8 @@ export const FormQuestao = styled.form`
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-color: rebeccapurple;
 `;
 
 export const Fieldset = styled.fieldset`
@@ -17,6 +17,7 @@ export const Fieldset = styled.fieldset`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: white;
 `;
 
 export const Legend = styled.legend`
@@ -26,6 +27,7 @@ export const Legend = styled.legend`
   margin-left: 30px;
   padding-left: 15px;
   padding-right: 20px;
+  margin-bottom: 66px;
 `;
 
 export const BotaoProximo = styled.button`
@@ -43,16 +45,24 @@ export const BotaoProximo = styled.button`
 
 import React from "react";
 
-export const Questao = ({ pergunta, options, onChange, value, id, active}) => {
-
+export const Questao = ({ pergunta, options, onChange, value, id, active }) => {
   if (active === false) return null;
   return (
     <Fieldset>
       <Legend>{pergunta}</Legend>
       {options.map((option) => (
-        <label key={option} style={{ marginBottom: "1rem", margin: "flex" }}>
+        <label
+          key={option}
+          style={{
+            margin: "flex",
+            display: "flex",
+            marginLeft: "60px",
+            fontSize: "18px",
+            marginBottom: "32px",
+          }}
+        >
           <input
-            type="radio"
+            type="radio"  
             id={id}
             checked={value === option}
             value={option}
