@@ -5,8 +5,10 @@ export const Comprimento = styled.div`
   height: 394px;
   display: flex;
   position: relative;
+  flex-direction: column;
   background-color: hsl(0deg 0% 0% / 29%);
-  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 `;
 
 export const TituloBoasVindas = styled.h1`
@@ -18,6 +20,37 @@ export const TituloBoasVindas = styled.h1`
   top: -20px;
 `;
 
-export const ParagrafoComprimento = styled.h3`
+export const ComprimentoNome = styled.h2`
+  font-size: 30px;
+  color: white;
+  font-weight: 700;
+  margin-top: 60px;
+`;
 
+export const CorNome = styled.span`
+  color: #8000FF;
+`;
+
+export const ParagrafoComprimento = styled.h3`
+  font-size: 23px;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  margin-top: 33px;
+  text-align: center;
+  width: 380px;
+  height: 84px;
+`;
+
+export const BotaoIniciarQuestionamentos = styled.button`
+  width: 98px;
+  height: 40px;
+  background: linear-gradient(80deg, #8000FF, #4D0099);
+
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-top: 80px;
 `;

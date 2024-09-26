@@ -11,7 +11,6 @@ export const Intro = styled.div`
 
 export const Titulo = styled.h1`
   color: white;
-  display: flex;
   font-weight: bold;
   font-size: 40px;
   flex-direction: column;
@@ -27,9 +26,10 @@ export const Paragrafo = styled.p`
 `;
 
 export const CorReact = styled.span`
-  color: #61dafb;
+  color: #61DAFB;
+
 `;
 
-export const CorNome = styled.span`
+export const ExemploNome = styled.span`
   font-weight: 700;
 `;
