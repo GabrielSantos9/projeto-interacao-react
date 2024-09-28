@@ -53,4 +53,5 @@ export const BotaoIniciarQuestionamentos = styled.button`
   border-radius: 5px;
   text-transform: uppercase;
   margin-top: 80px;
+  cursor: pointer;
 `;

@@ -47,10 +47,9 @@ const App = () => {
       <GlobalStyle />
       <ConteudoGeral>
         <ConteudoPrincipal>
-        {!showCampoQuestoes && <Introducao />}
-        {!showCampoQuestoes && <FormNome onNext={handleNextClick} />}
+        {!showCampoQuestoes && <Introducao onNext={handleNextClick} />}
         {showCampoQuestoes && <BoasVindas/>}
-        {/* {showCampoQuestoes && <CampoQuestoes/>} */}
+        {showCampoQuestoes && <CampoQuestoes/>}
         </ConteudoPrincipal>
       </ConteudoGeral>
     </>
