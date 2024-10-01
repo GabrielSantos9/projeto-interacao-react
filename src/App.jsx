@@ -45,8 +45,8 @@ const App = () => {
       <GlobalStyle />
       <ConteudoGeral>
         <ConteudoPrincipal>
-        {!showCampoQuestoes && <Introducao onNext={handleNextClick} />}
-        {showCampoQuestoes && <BoasVindas/>}
+          {!showCampoQuestoes && <Introducao onNext={handleNextClick} />}
+          {showCampoQuestoes && <BoasVindas />}
         </ConteudoPrincipal>
       </ConteudoGeral>
     </>
