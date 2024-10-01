@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Introducao from "../src/Componentes/Introducao";
-import FormNome from "../src/Componentes/CampoNome";
-import CampoQuestoes from "./Componentes/CampoQuestoes";
 import BoasVindas from "./Componentes/BoasVindas";
 
 const GlobalStyle = createGlobalStyle`
@@ -49,7 +47,6 @@ const App = () => {
         <ConteudoPrincipal>
         {!showCampoQuestoes && <Introducao onNext={handleNextClick} />}
         {showCampoQuestoes && <BoasVindas/>}
-        {showCampoQuestoes && <CampoQuestoes/>}
         </ConteudoPrincipal>
       </ConteudoGeral>
     </>
