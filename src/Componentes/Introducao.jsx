@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import {
   Intro,
@@ -17,19 +17,6 @@ import {
 } from "../Estilizações/ECampoNome";
 
 const Introducao = ({ onNext }) => {
-  const [inputValue, setInputValue] = useState("");
-  const [resultado, setResultado] = useState(null);
-
-  // Função para atualizar o valor do input
-  const handleInputChange = (e) => {
-    setInputValue(e.target.value);
-  };
-
-  // Função para salvar o valor do input
-  const salvarResultado = () => {
-    setResultado(inputValue); // Salva o valor atual do input
-  };
-
   return (
     <>
       <Intro>
@@ -46,14 +33,8 @@ const Introducao = ({ onNext }) => {
       <CampoNome>
         <SvgNome />
         <LabelNome htmlFor="nome">Seu nome</LabelNome>
-        <PreencherInput
-          id="nome"
-          type="text"
-          name="nome"
-          value={inputValue}
-          onChange={handleInputChange}
-        />  
-        <BotaoProximo type="button" onClick={salvarResultado}>
+        <PreencherInput id="nome" type="text" name="nome" />
+        <BotaoProximo type="button" onClick={onNext}>
           próximo
         </BotaoProximo>
       </CampoNome>
