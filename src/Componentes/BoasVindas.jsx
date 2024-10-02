@@ -10,15 +10,15 @@ import {
 import CampoQuestoes from "../Componentes/CampoQuestoes"
 
 const BoasVindas = () => {
-  const [testeRender, setTesteRender] = useState(false);
+  const [TelaQuestoes, setTelaQuestoes] = useState(false);
 
-  const handleTeste = () => {
-    setTesteRender(true);
+  const handleScreen = () => {
+    setTelaQuestoes(true);
   }
 
   return (
     <>
-    {!testeRender && <Comprimento onNext={handleTeste}>
+    {!TelaQuestoes && <Comprimento onNext={handleScreen}>
       <TituloBoasVindas>Boas vindas!</TituloBoasVindas>
       <ComprimentoNome>
         Olá,
@@ -27,9 +27,9 @@ const BoasVindas = () => {
       <ParagrafoComprimento>
         Agora que eu já descobri seu nome, bora responder o questionamento.
       </ParagrafoComprimento>
-      <BotaoIniciarQuestionamentos type="button" onClick={handleTeste}>iniciar</BotaoIniciarQuestionamentos>
+      <BotaoIniciarQuestionamentos type="button" onClick={handleScreen}>iniciar</BotaoIniciarQuestionamentos>
     </Comprimento>}
-    {testeRender && <CampoQuestoes/>}
+    {TelaQuestoes && <CampoQuestoes/>}
     </>
   );
 };
