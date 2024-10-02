@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import {
   Intro,
@@ -6,7 +6,7 @@ import {
   Paragrafo,
   CorReact,
   ExemploNome,
-} from "../Estilizações/EIntroducao";
+} from '../Estilizações/EIntroducao';
 
 import {
   CampoNome,
@@ -14,15 +14,20 @@ import {
   SvgNome,
   BotaoProximo,
   PreencherInput,
-} from "../Estilizações/ECampoNome";
+} from '../Estilizações/ECampoNome';
 
-const Introducao = ({ onNext }) => {
+const Introducao = ({ AmarzenaNome }) => {
+  const [StorageName, setStorageName] = React.useState('');
+
+  function AmarzenaNome() {
+    console.log(`${setStorageName}`);
+  }
   return (
     <>
       <Intro>
         <Titulo>
-          {" "}
-          Olá, seja bem vindo no meu primeiro projeto utilizando{" "}
+          {' '}
+          Olá, seja bem vindo no meu primeiro projeto utilizando{' '}
           <CorReact>React</CorReact>!
         </Titulo>
         <Paragrafo>
@@ -33,8 +38,8 @@ const Introducao = ({ onNext }) => {
       <CampoNome>
         <SvgNome />
         <LabelNome htmlFor="nome">Seu nome</LabelNome>
-        <PreencherInput id="nome" type="text" name="nome" />
-        <BotaoProximo type="button" onClick={onNext}>
+        <PreencherInput id="nome" type="text" name="nome" value={setStorageName} />
+        <BotaoProximo type="button" onClick={AmarzenaNome}>
           próximo
         </BotaoProximo>
       </CampoNome>
