@@ -35,10 +35,10 @@ export const Icon = styled.img`
 `;
 
 export const PreencherInput = () => (
-  <InputWrapper>
-    <Icon src={iconeUsuario} alt="search icon" />
+  // <InputWrapper>
+  //   <Icon src={iconeUsuario} alt="search icon" />
+  // </InputWrapper>
     <PreencherNome></PreencherNome>
-  </InputWrapper>
 );
 
 export const SVG = styled.img`
