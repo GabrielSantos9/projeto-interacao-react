@@ -35,10 +35,10 @@ export const Icon = styled.img`
 `;
 
 export const PreencherInput = () => (
-  // <InputWrapper>
-  //   <Icon src={iconeUsuario} alt="search icon" />
-  // </InputWrapper>
-    <PreencherNome></PreencherNome>
+    // <PreencherNome placeholder="Digite algo..." ></PreencherNome>
+  <InputWrapper>
+    <Icon src={iconeUsuario} alt="search icon" />
+  </InputWrapper>
 );
 
 export const SVG = styled.img`
@@ -53,7 +53,8 @@ export const SvgNome = () => <SVG src={nomeSVG} alt="teste1"></SVG>;
 export const PreencherNome = styled.input`
   width: 318px;
   height: 40px;
-  padding: 10px 10px 10px 40px;
+  /* padding: 10px 10px 10px 40px; */
+  padding-left: 10px;
   border-radius: 4px;
   outline: none;
   background-color: hsl(0deg 0% 16% / 70%);

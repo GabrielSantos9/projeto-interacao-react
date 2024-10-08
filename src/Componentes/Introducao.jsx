@@ -14,13 +14,14 @@ import {
   SvgNome,
   BotaoProximo,
   PreencherInput,
+  PreencherNome,
 } from "../Estilizações/ECampoNome";
 
 const Introducao = ({ ArmazenaNome }) => {
   const [StorageName, setStorageName] = React.useState("");
 
   const handleChange = (event) => {
-    setStorageName(event.target.value); // Armazena o valor do input no estado
+    setStorageName(event.target.value);
   };
 
   const handleSubmit = () => {
@@ -29,8 +30,8 @@ const Introducao = ({ ArmazenaNome }) => {
       alert("Por favor, insira seu nome.");
       return;
     }
-    ArmazenaNome(StorageName);
-    console.log(StorageName);
+    // ArmazenaNome(StorageName);
+    alert(StorageName);
   };
   return (
     <>
@@ -48,13 +49,15 @@ const Introducao = ({ ArmazenaNome }) => {
       <CampoNome>
         <SvgNome />
         <LabelNome htmlFor="nome">Seu nome</LabelNome>
-        <PreencherInput
+
+        <PreencherNome
           id="nome"
           type="text"
           name="nome"
           value={StorageName}
           onChange={handleChange}
-        />
+          placeholder="Digite algo..."
+        ></PreencherNome>
         <BotaoProximo type="button" onClick={handleSubmit}>
           próximo
         </BotaoProximo>
