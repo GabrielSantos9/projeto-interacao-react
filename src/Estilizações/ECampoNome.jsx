@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import iconeUsuario from "../img/person1.svg";
 import nomeSVG from "../img/NomeSVG.svg";
 
 export const CampoNome = styled.form`
@@ -28,18 +27,11 @@ export const InputWrapper = styled.div`
 export const Icon = styled.img`
   position: absolute;
   left: 10px;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
 `;
-
-export const PreencherInput = () => (
-    // <PreencherNome placeholder="Digite algo..." ></PreencherNome>
-  <InputWrapper>
-    <Icon src={iconeUsuario} alt="search icon" />
-  </InputWrapper>
-);
 
 export const SVG = styled.img`
   position: absolute;
@@ -53,8 +45,7 @@ export const SvgNome = () => <SVG src={nomeSVG} alt="teste1"></SVG>;
 export const PreencherNome = styled.input`
   width: 318px;
   height: 40px;
-  /* padding: 10px 10px 10px 40px; */
-  padding-left: 10px;
+  padding: 10px 10px 10px 40px;
   border-radius: 4px;
   outline: none;
   background-color: hsl(0deg 0% 16% / 70%);
@@ -85,5 +76,5 @@ export const BotaoProximo = styled.button`
   border-radius: 8px;
   cursor: pointer;
   background: linear-gradient(45deg, #8000ff, #4d0099);
-  text-transform: uppercase;
+  text-transform: uppercase;
 `;

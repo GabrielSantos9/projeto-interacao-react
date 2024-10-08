@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import iconeUsuario from "../img/person1.svg";
 
 import {
   Intro,
@@ -13,11 +14,12 @@ import {
   LabelNome,
   SvgNome,
   BotaoProximo,
-  PreencherInput,
+  InputWrapper,
+  Icon,
   PreencherNome,
 } from "../Estilizações/ECampoNome";
 
-const Introducao = ({ ArmazenaNome }) => {
+const Introducao = () => {
   const [StorageName, setStorageName] = React.useState("");
 
   const handleChange = (event) => {
@@ -30,7 +32,6 @@ const Introducao = ({ ArmazenaNome }) => {
       alert("Por favor, insira seu nome.");
       return;
     }
-    // ArmazenaNome(StorageName);
     alert(StorageName);
   };
   return (
@@ -49,15 +50,16 @@ const Introducao = ({ ArmazenaNome }) => {
       <CampoNome>
         <SvgNome />
         <LabelNome htmlFor="nome">Seu nome</LabelNome>
-
-        <PreencherNome
-          id="nome"
-          type="text"
-          name="nome"
-          value={StorageName}
-          onChange={handleChange}
-          placeholder="Digite algo..."
-        ></PreencherNome>
+        <InputWrapper>
+          <Icon src={iconeUsuario} alt="search-icon"></Icon>
+          <PreencherNome
+            id="nome"
+            type="text"
+            name="nome"
+            value={StorageName}
+            onChange={handleChange}
+          ></PreencherNome>
+        </InputWrapper>
         <BotaoProximo type="button" onClick={handleSubmit}>
           próximo
         </BotaoProximo>
