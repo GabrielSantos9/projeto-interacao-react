@@ -19,20 +19,19 @@ import {
   PreencherNome,
 } from "../Estilizações/ECampoNome";
 
-const Introducao = () => {
-  const [StorageName, setStorageName] = React.useState("");
-
+const Introducao = ({ onClick }) => {
+  const [StorageName, setStorageName] = React.useState("A");
+  
   const handleChange = (event) => {
     setStorageName(event.target.value);
   };
 
   const handleSubmit = () => {
-    console.log("Valor antes da validação:", StorageName);
     if (StorageName.trim() === "") {
       alert("Por favor, insira seu nome.");
       return;
     }
-    alert(StorageName);
+    onClick();
   };
   return (
     <>

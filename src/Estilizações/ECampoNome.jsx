@@ -76,5 +76,5 @@ export const BotaoProximo = styled.button`
   border-radius: 8px;
   cursor: pointer;
   background: linear-gradient(45deg, #8000ff, #4d0099);
-  text-transform: uppercase;
+  text-transform: uppercase;
 `;
