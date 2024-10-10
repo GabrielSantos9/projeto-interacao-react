@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import iconeUsuario from "../img/person1.svg";
 
 import {
@@ -19,9 +19,7 @@ import {
   PreencherNome,
 } from "../Estilizações/ECampoNome";
 
-const Introducao = ({ onClick }) => {
-  const [StorageName, setStorageName] = React.useState("A");
-  
+const Introducao = ({ StorageName, setStorageName, onClick }) => {
   const handleChange = (event) => {
     setStorageName(event.target.value);
   };
@@ -33,11 +31,11 @@ const Introducao = ({ onClick }) => {
     }
     onClick();
   };
+
   return (
     <>
       <Intro>
         <Titulo>
-          {" "}
           Olá, seja bem vindo no meu primeiro projeto utilizando{" "}
           <CorReact>React</CorReact>!
         </Titulo>
@@ -66,4 +64,5 @@ const Introducao = ({ onClick }) => {
     </>
   );
 };
+
 export default Introducao;

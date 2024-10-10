@@ -9,7 +9,7 @@ import {
 } from "../Estilizações/EBoasVindas";
 import CampoQuestoes from "../Componentes/CampoQuestoes";
 
-const BoasVindas = () => {
+const BoasVindas = ({ StorageName }) => {
   const [TelaQuestoes, setTelaQuestoes] = useState(false);
 
   const handleScreen = () => {
@@ -23,7 +23,7 @@ const BoasVindas = () => {
           <TituloBoasVindas>Boas vindas!</TituloBoasVindas>
           <ComprimentoNome>
             Olá,
-            <CorNome> Nome</CorNome>!
+            <CorNome> {StorageName}</CorNome>!
           </ComprimentoNome>
           <ParagrafoComprimento>
             Agora que eu já descobri seu nome, bora responder o questionamento.

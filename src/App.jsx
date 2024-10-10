@@ -35,18 +35,28 @@ const ConteudoPrincipal = styled.div`
 `;
 
 const App = () => {
+  const [StorageName, setStorageName] = useState("");
   const [showCampoQuestoes, setShowCampoQuestoes] = useState(false);
 
   const handleNextClick = () => {
-    setShowCampoQuestoes(true);
+    if (StorageName.trim() !== "") {
+      setShowCampoQuestoes(true);
+    }
   };
+
   return (
     <>
       <GlobalStyle />
       <ConteudoGeral>
         <ConteudoPrincipal>
-          {!showCampoQuestoes && <Introducao onClick={handleNextClick}/>}
-          {showCampoQuestoes && <BoasVindas />}
+          {!showCampoQuestoes && (
+            <Introducao
+              StorageName={StorageName}
+              setStorageName={setStorageName}
+              onClick={handleNextClick}
+            />
+          )}
+          {showCampoQuestoes && <BoasVindas StorageName={StorageName} />}
         </ConteudoPrincipal>
       </ConteudoGeral>
     </>
