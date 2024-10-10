@@ -51,6 +51,11 @@ export const PreencherNome = styled.input`
   background-color: hsl(0deg 0% 16% / 70%);
   color: white;
   margin-top: 6px;
+
+  &:focus {
+    border: 0.5px solid #8000ff4e;
+    transition: 0.9s;
+  }
 `;
 
 export const PreencherTeste = styled.input`
@@ -77,4 +82,9 @@ export const BotaoProximo = styled.button`
   cursor: pointer;
   background: linear-gradient(45deg, #8000ff, #4d0099);
   text-transform: uppercase;
+
+  &:hover {
+    box-shadow: 0px 4px 54.4px 0px #8000FF;
+    transition: 0.4s;
+  }
 `;
