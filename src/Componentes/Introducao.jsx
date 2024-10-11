@@ -26,11 +26,23 @@ const Introducao = ({ StorageName, setStorageName, onClick }) => {
 
   const handleSubmit = () => {
     if (StorageName.trim() === "") {
-      alert("Por favor, insira seu nome.");
+      // alert("Por favor, insira seu nome.");
+      teste()
       return;
     }
     onClick();
   };
+
+  const teste = () => {
+    Swal.fire({
+      title: "Atenção!",
+      text: "Para começar a interação será necessário me dizer seu nome!",
+      icon: "warning",
+      background: "#414141",
+      color: "#FFFFFF",
+      confirmButtonColor: "#8000ff",
+    });
+  }
 
   return (
     <>

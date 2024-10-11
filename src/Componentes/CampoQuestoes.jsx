@@ -3,10 +3,12 @@ import {
   Questao,
   FormQuestao,
   BotaoProximo,
+  NumeroQuestão,
 } from "../Estilizações/ECampoQuestoes";
 
 const perguntas = [
   {
+    numero: "1",
     pergunta: "Qual método é utilizado para criar componentes?",
     options: [
       "React.makeComponent()",
@@ -17,6 +19,7 @@ const perguntas = [
     id: "p1",
   },
   {
+    numero: "2",
     pergunta: "Como importamos um componente externo?",
     options: [
       'import Component from "./Component"',
@@ -27,12 +30,14 @@ const perguntas = [
     id: "p2",
   },
   {
+    numero: "3",
     pergunta: "Qual hook não é nativo?",
     options: ["useEffect()", "useFetch()", "useCallback()"],
     resposta: "useFetch()",
     id: "p3",
   },
   {
+    numero: "4",
     pergunta: "Qual palavra deve ser utilizada para criarmos um hook?",
     options: ["set", "get", "use"],
     resposta: "use",

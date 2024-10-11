@@ -9,6 +9,12 @@ export const FormQuestao = styled.form`
   align-items: center;
 `;
 
+export const NumeroQuestão = styled.span`
+  background: linear-gradient(80deg, #8000FF, #4D0099);
+  font-size: 40px;
+  font-weight: 500;
+`;
+
 export const Fieldset = styled.fieldset`
   border: 2px solid rgba(31, 31, 31, 62);
   border-radius: 8px;
@@ -35,6 +41,10 @@ export const BotaoProximo = styled.button`
   height: 40px;
   background-color: #8000ff;
   border-radius: 8px;
+  &:hover {
+    box-shadow: 0px 4px 54.4px 0px #8000ff;
+    transition: 0.4s;
+  }
 
   font-size: 18px;
   font-weight: 600;
@@ -62,7 +72,7 @@ export const Questao = ({ pergunta, options, onChange, value, id, active }) => {
           }}
         >
           <input
-            type="radio"  
+            type="radio"
             id={id}
             checked={value === option}
             value={option}
