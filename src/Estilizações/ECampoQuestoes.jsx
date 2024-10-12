@@ -14,6 +14,7 @@ export const PalavraQuestao = styled.h1`
   color: white;
   font-size: 40px;
   font-weight: 700;
+  margin-bottom: 80px;
 `;
 
 export const NumeroQuestão = styled.span`
@@ -46,7 +47,7 @@ export const Legend = styled.legend`
 export const BotaoProximo = styled.button`
   width: 220px;
   height: 40px;
-  background-color: #8000ff;
+  background: linear-gradient(45deg, #8000ff, #4d0099);
   border-radius: 8px;
   &:hover {
     box-shadow: 0px 4px 54.4px 0px #8000ff;
@@ -58,6 +59,7 @@ export const BotaoProximo = styled.button`
   color: white;
   text-transform: uppercase;
   margin-top: 40px;
+  cursor: pointer;
 `;
 
 import React from "react";

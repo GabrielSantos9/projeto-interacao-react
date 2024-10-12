@@ -26,7 +26,6 @@ const Introducao = ({ StorageName, setStorageName, onClick }) => {
 
   const handleSubmit = () => {
     if (StorageName.trim() === "") {
-      // alert("Por favor, insira seu nome.");
       teste()
       return;
     }
