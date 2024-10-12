@@ -26,10 +26,10 @@ const BoasVindas = ({ StorageName }) => {
             <CorNome> {StorageName}</CorNome>!
           </ComprimentoNome>
           <ParagrafoComprimento>
-            Agora que eu já descobri seu nome, bora responder o questionamento.
+            Agora que eu já sei o seu nome bora responder o questionamento.
           </ParagrafoComprimento>
           <BotaoIniciarQuestionamentos type="button" onClick={handleScreen}>
-            iniciar
+            começar
           </BotaoIniciarQuestionamentos>
         </Comprimento>
       )}

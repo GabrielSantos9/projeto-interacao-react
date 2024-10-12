@@ -38,7 +38,7 @@ export const ParagrafoComprimento = styled.h3`
   display: flex;
   margin-top: 33px;
   text-align: center;
-  width: 380px;
+  width: 340px;
   height: 84px;
 `;
 

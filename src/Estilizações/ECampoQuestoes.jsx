@@ -7,12 +7,19 @@ export const FormQuestao = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+`;
+
+export const PalavraQuestao = styled.h1`
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
 `;
 
 export const NumeroQuestão = styled.span`
-  background: linear-gradient(80deg, #8000FF, #4D0099);
+  color: #8000FF;
   font-size: 40px;
-  font-weight: 500;
+  font-weight: 700;
 `;
 
 export const Fieldset = styled.fieldset`
@@ -50,7 +57,7 @@ export const BotaoProximo = styled.button`
   font-weight: 600;
   color: white;
   text-transform: uppercase;
-  margin-top: 10px;
+  margin-top: 40px;
 `;
 
 import React from "react";
