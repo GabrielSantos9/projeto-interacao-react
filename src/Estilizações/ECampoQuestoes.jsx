@@ -15,12 +15,14 @@ export const PalavraQuestao = styled.h1`
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 80px;
+  margin-right: 8px;
 `;
 
 export const NumeroQuestão = styled.span`
   color: #8000FF;
   font-size: 40px;
   font-weight: 700;
+  display: flex;
 `;
 
 export const Fieldset = styled.fieldset`
@@ -93,5 +95,7 @@ export const Questao = ({ pergunta, options, onChange, value, id, active }) => {
     </Fieldset>
   );
 };
+
+
 
 export default Questao;

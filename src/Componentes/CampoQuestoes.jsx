@@ -71,7 +71,7 @@ const CampoQuestoes = () => {
     if (slide < perguntas.length - 1) {
       setSlide(slide + 1);
     } else {
-      setSlide(slide + 1);
+      setSlide(slide + 1 <= 4);
       resultado();
     }
   }
@@ -79,7 +79,11 @@ const CampoQuestoes = () => {
   return (
     <>
       <FormQuestao onSubmit={(event) => event.preventDefault()}>
-      <PalavraQuestao>Questão <NumeroQuestão>{slide + 1}</NumeroQuestão></PalavraQuestao>
+        {resultadoFinal === null && (
+          <NumeroQuestão>
+            <PalavraQuestao>Questão</PalavraQuestao> {` 0${slide + 1}`}
+          </NumeroQuestão>
+        )}
         {perguntas.map((pergunta, index) => (
           <Questao
             active={slide === index}
