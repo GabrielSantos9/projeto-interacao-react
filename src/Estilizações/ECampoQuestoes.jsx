@@ -18,7 +18,7 @@ export const PalavraQuestao = styled.h1`
   margin-right: 8px;
 `;
 
-export const NumeroQuestão = styled.span`
+export const NumeroQuestao = styled.span`
   color: #8000FF;
   font-size: 40px;
   font-weight: 700;

@@ -26,13 +26,13 @@ const Introducao = ({ StorageName, setStorageName, onClick }) => {
 
   const handleSubmit = () => {
     if (StorageName.trim() === "") {
-      teste()
+      validacaoNome()
       return;
     }
     onClick();
   };
 
-  const teste = () => {
+  const validacaoNome = () => {
     Swal.fire({
       title: "Atenção!",
       text: "Para começar a interação será necessário me dizer seu nome!",

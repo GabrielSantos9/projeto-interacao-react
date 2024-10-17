@@ -56,7 +56,7 @@ const App = () => {
               onClick={handleNextClick}
             />
           )}
-          {showCampoQuestoes && <BoasVindas StorageName={StorageName} />}
+          {showCampoQuestoes && <BoasVindas StorageName={StorageName} onClick={handleNextClick} />}
         </ConteudoPrincipal>
       </ConteudoGeral>
     </>

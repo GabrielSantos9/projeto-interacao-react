@@ -4,8 +4,22 @@ import {
   FormQuestao,
   BotaoProximo,
   PalavraQuestao,
-  NumeroQuestão,
+  NumeroQuestao,
 } from "../Estilizações/ECampoQuestoes";
+
+import {
+  ConteudoResultado,
+  BarraSuperior,
+  TituloResultados,
+  Estatisticas,
+  NumeroPerguntas,
+  NumeroAcertos,
+  NumeroErros,
+  TipoEstatiticas,
+  QuantidadePerguntas,
+  QuantidadeAcertos,
+  QuantidadeErros,
+} from "../Estilizações/ETesteee";
 
 const perguntas = [
   {
@@ -57,7 +71,7 @@ const CampoQuestoes = () => {
     setRespostas({ ...respostas, [target.id]: target.value });
   }
 
-  function resultado() {
+  function Resultado() {
     const corretas = perguntas.filter(
       ({ id, resposta }) => respostas[id] === resposta
     );
@@ -72,7 +86,7 @@ const CampoQuestoes = () => {
       setSlide(slide + 1);
     } else {
       setSlide(slide + 1 <= 4);
-      resultado();
+      Resultado();
     }
   }
 
@@ -80,9 +94,9 @@ const CampoQuestoes = () => {
     <>
       <FormQuestao onSubmit={(event) => event.preventDefault()}>
         {resultadoFinal === null && (
-          <NumeroQuestão>
+          <NumeroQuestao>
             <PalavraQuestao>Questão</PalavraQuestao> {` 0${slide + 1}`}
-          </NumeroQuestão>
+          </NumeroQuestao>
         )}
         {perguntas.map((pergunta, index) => (
           <Questao
@@ -94,7 +108,27 @@ const CampoQuestoes = () => {
           />
         ))}
         {resultadoFinal ? (
-          <p>{resultadoFinal}</p>
+          <>
+            {/* <p>{resultadoFinal}</p> */}
+            <ConteudoResultado>
+              <BarraSuperior />
+              <TituloResultados>Resultados</TituloResultados>
+              <Estatisticas>
+                <NumeroPerguntas>
+                  <TipoEstatiticas>Perguntas</TipoEstatiticas>
+                  <QuantidadePerguntas>4</QuantidadePerguntas>
+                </NumeroPerguntas>
+                <NumeroAcertos>
+                <TipoEstatiticas>Acertos</TipoEstatiticas>
+                <QuantidadeAcertos>0</QuantidadeAcertos>
+                </NumeroAcertos>
+                <NumeroErros>
+                <TipoEstatiticas>Erros</TipoEstatiticas>
+                <QuantidadeErros>0</QuantidadeErros>
+                </NumeroErros>
+              </Estatisticas>
+            </ConteudoResultado>
+          </>
         ) : (
           <BotaoProximo onClick={handleClick}>próximo</BotaoProximo>
         )}
