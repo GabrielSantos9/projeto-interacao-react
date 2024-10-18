@@ -10,12 +10,13 @@ import {
 import {
   ConteudoResultado,
   BarraSuperior,
+  Circle,
   TituloResultados,
   Estatisticas,
   NumeroPerguntas,
   NumeroAcertos,
   NumeroErros,
-  TipoEstatiticas,
+  TipoEstatisticas,
   QuantidadePerguntas,
   QuantidadeAcertos,
   QuantidadeErros,
@@ -75,10 +76,9 @@ const CampoQuestoes = () => {
     const corretas = perguntas.filter(
       ({ id, resposta }) => respostas[id] === resposta
     );
-    setResultadoFinal(
-      `Você acertou: ${corretas.length} de ${perguntas.length}`
-    );
-    console.log(corretas);
+    const erros = perguntas.length - corretas.length;
+    
+    setResultadoFinal({ acertos: corretas.length, erros });
   }
 
   function handleClick() {
@@ -109,22 +109,25 @@ const CampoQuestoes = () => {
         ))}
         {resultadoFinal ? (
           <>
-            {/* <p>{resultadoFinal}</p> */}
             <ConteudoResultado>
-              <BarraSuperior />
+              <BarraSuperior>
+                <Circle style={{marginRight:'9px', marginLeft:'20px'}} />
+                <Circle style={{marginRight:'9px'}} />
+                <Circle />
+              </BarraSuperior>
               <TituloResultados>Resultados</TituloResultados>
               <Estatisticas>
                 <NumeroPerguntas>
-                  <TipoEstatiticas>Perguntas</TipoEstatiticas>
-                  <QuantidadePerguntas>4</QuantidadePerguntas>
+                  <TipoEstatisticas>Perguntas</TipoEstatisticas>
+                  <QuantidadePerguntas>{perguntas.length}</QuantidadePerguntas>
                 </NumeroPerguntas>
                 <NumeroAcertos>
-                <TipoEstatiticas>Acertos</TipoEstatiticas>
-                <QuantidadeAcertos>0</QuantidadeAcertos>
+                  <TipoEstatisticas>Acertos</TipoEstatisticas>
+                  <QuantidadeAcertos>{resultadoFinal.acertos}</QuantidadeAcertos>
                 </NumeroAcertos>
                 <NumeroErros>
-                <TipoEstatiticas>Erros</TipoEstatiticas>
-                <QuantidadeErros>0</QuantidadeErros>
+                  <TipoEstatisticas>Erros</TipoEstatisticas>
+                  <QuantidadeErros>{resultadoFinal.erros}</QuantidadeErros>
                 </NumeroErros>
               </Estatisticas>
             </ConteudoResultado>

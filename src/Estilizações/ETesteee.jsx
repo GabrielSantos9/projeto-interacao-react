@@ -13,6 +13,15 @@ export const BarraSuperior = styled.div`
   width: 740px;
   height: 36px;
   background-color: #6c63ff;
+  display: flex;
+  align-items: center;
+`;
+
+export const Circle = styled.div`
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: white;
 `;
 
 export const TituloResultados = styled.h1`
@@ -50,7 +59,7 @@ export const NumeroErros = styled.div`
   background-color: #2a2a2a;
 `;
 
-export const TipoEstatiticas = styled.div`
+export const TipoEstatisticas = styled.div`
   font-size: 16px;
   font-weight: 600;
   color: white;
@@ -64,7 +73,7 @@ export const QuantidadePerguntas = styled.div`
   font-weight: 700;
   display: flex;
   justify-content: center;
-  color: #AB6DE9;
+  color: #ab6de9;
 `;
 
 export const QuantidadeAcertos = styled.div`
@@ -72,7 +81,7 @@ export const QuantidadeAcertos = styled.div`
   font-weight: 700;
   display: flex;
   justify-content: center;
-  color: #93F597;
+  color: #93f597;
 `;
 
 export const QuantidadeErros = styled.div`
@@ -80,5 +89,5 @@ export const QuantidadeErros = styled.div`
   font-weight: 700;
   display: flex;
   justify-content: center;
-  color: #F45050;
+  color: #f45050;
 `;
