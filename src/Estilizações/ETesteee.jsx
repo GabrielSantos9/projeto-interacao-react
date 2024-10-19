@@ -91,3 +91,41 @@ export const QuantidadeErros = styled.div`
   justify-content: center;
   color: #f45050;
 `;
+
+export const PerguntasRespostas = styled.div`
+  width: 640px;
+  height: 175px;
+  display: flex;
+  margin-top: 45px;
+  margin-left: 50px;
+  margin-right: 50px;
+  flex-direction: column;
+`;
+
+export const CirclePR = styled.div`
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 8px;
+  margin-right: 5px;
+  background: linear-gradient(80deg, #8000ff, #4d0099);
+  display: flex;
+`;
+
+export const TituloPR = styled.h2`
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+`;
+
+
+export const QuestionamentosERespostas = styled.div`
+  display: flex;
+  margin-top: 10px;
+`;
+
+export const Questionamento = styled.h3`
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 64px;
+`;
