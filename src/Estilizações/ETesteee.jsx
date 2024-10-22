@@ -102,11 +102,15 @@ export const PerguntasRespostas = styled.div`
   flex-direction: column;
 `;
 
+export const TituloPeR = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export const CirclePR = styled.div`
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  margin-top: 8px;
   margin-right: 5px;
   background: linear-gradient(80deg, #8000ff, #4d0099);
   display: flex;
@@ -116,6 +120,7 @@ export const TituloPR = styled.h2`
   font-size: 20px;
   color: white;
   font-weight: 700;
+  display: flex;
 `;
 
 
@@ -127,5 +132,21 @@ export const QuestionamentosERespostas = styled.div`
 export const Questionamento = styled.h3`
   font-size: 15px;
   font-weight: 700;
-  margin-left: 64px;
+  margin-left: 14px;
+  color: white;
+`;
+
+export const Resposta = styled.span`
+  color: #CCCCCC;
+  margin-left: 30px;
+  font-weight: 500;
+  font-size: 13px;
+  display: flex;
+  margin-bottom: 15px;
+`;
+
+export const Negrito = styled.p`
+  color: #CCCCCC;
+  font-weight: 700;
+  font-size: 13px;
 `;

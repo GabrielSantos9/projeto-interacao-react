@@ -25,6 +25,9 @@ import {
   TituloPR,
   QuestionamentosERespostas,
   Questionamento,
+  TituloPeR,
+  Resposta,
+  Negrito,
 } from "../Estilizações/ETesteee";
 
 const perguntas = [
@@ -113,59 +116,67 @@ const CampoQuestoes = () => {
           />
         ))}
         {resultadoFinal ? (
-  <>
-    <ConteudoResultado>
-      <BarraSuperior>
-        <Circle style={{ marginRight: "9px", marginLeft: "20px" }} />
-        <Circle style={{ marginRight: "9px" }} />
-        <Circle />
-      </BarraSuperior>
-      <TituloResultados>Resultados</TituloResultados>
-      <Estatisticas>
-        <NumeroPerguntas>
-          <TipoEstatisticas>Perguntas</TipoEstatisticas>
-          <QuantidadePerguntas>{perguntas.length}</QuantidadePerguntas>
-        </NumeroPerguntas>
-        <NumeroAcertos>
-          <TipoEstatisticas>Acertos</TipoEstatisticas>
-          <QuantidadeAcertos>{resultadoFinal.acertos}</QuantidadeAcertos>
-        </NumeroAcertos>
-        <NumeroErros>
-          <TipoEstatisticas>Erros</TipoEstatisticas>
-          <QuantidadeErros>{resultadoFinal.erros}</QuantidadeErros>
-        </NumeroErros>
-      </Estatisticas>
+          <>
+            <ConteudoResultado>
+              <BarraSuperior>
+                <Circle style={{ marginRight: "9px", marginLeft: "20px" }} />
+                <Circle style={{ marginRight: "9px" }} />
+                <Circle />
+              </BarraSuperior>
+              <TituloResultados>Resultados</TituloResultados>
+              <Estatisticas>
+                <NumeroPerguntas>
+                  <TipoEstatisticas>Perguntas</TipoEstatisticas>
+                  <QuantidadePerguntas>{perguntas.length}</QuantidadePerguntas>
+                </NumeroPerguntas>
+                <NumeroAcertos>
+                  <TipoEstatisticas>Acertos</TipoEstatisticas>
+                  <QuantidadeAcertos>
+                    {resultadoFinal.acertos}
+                  </QuantidadeAcertos>
+                </NumeroAcertos>
+                <NumeroErros>
+                  <TipoEstatisticas>Erros</TipoEstatisticas>
+                  <QuantidadeErros>{resultadoFinal.erros}</QuantidadeErros>
+                </NumeroErros>
+              </Estatisticas>
 
-      <PerguntasRespostas>
-        <CirclePR />
-        <TituloPR>Perguntas e Respostas</TituloPR>
-        <QuestionamentosERespostas>
-          <ul>
-            {perguntas.map((pergunta) => (
-              <li key={pergunta.id}>
-                <Questionamento>{pergunta.pergunta}</Questionamento>
-                <br />
-                <span>Sua resposta: {respostas[pergunta.id]}</span>
-                {/* Verifica se a resposta está errada e, se sim, exibe a correta */}
-                {respostas[pergunta.id] !== pergunta.resposta && (
-                  <>
-                    <br />
-                    <span style={{ color: 'red' }}>
-                      Resposta correta: {pergunta.resposta}
-                    </span>
-                  </>
-                )}
-              </li>
-            ))}
-          </ul>
-        </QuestionamentosERespostas>
-      </PerguntasRespostas>
-    </ConteudoResultado>
-  </>
-) : (
-  <BotaoProximo onClick={handleClick}>próximo</BotaoProximo>
-)}
-
+              <PerguntasRespostas>
+                <TituloPeR style={{ display: "flex", alignItems: "center" }}>
+                  <CirclePR />
+                  <TituloPR>Perguntas e Respostas</TituloPR>
+                </TituloPeR>
+                <QuestionamentosERespostas>
+                  <ul
+                    style={{
+                      listStyleType: "none",
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
+                    {perguntas.map((pergunta) => (
+                      <li key={pergunta.id}>
+                        <Questionamento>{pergunta.pergunta}</Questionamento>
+                        <Resposta>
+                          <Negrito>R:&nbsp;</Negrito> {respostas[pergunta.id]}
+                        </Resposta>
+                        {respostas[pergunta.id] !== pergunta.resposta && (
+                          <>
+                            <span style={{ color: "red" }}>
+                              Resposta correta: {pergunta.resposta}
+                            </span>
+                          </>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </QuestionamentosERespostas>
+              </PerguntasRespostas>
+            </ConteudoResultado>
+          </>
+        ) : (
+          <BotaoProximo onClick={handleClick}>próximo</BotaoProximo>
+        )}
       </FormQuestao>
     </>
   );
