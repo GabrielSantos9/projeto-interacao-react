@@ -1,4 +1,7 @@
 import React from "react";
+import Correto from "../img/correto.svg"; // Ícone de resposta correta
+import Errado from "../img/errado.svg"; // Ícone de resposta errada
+
 import {
   Questao,
   FormQuestao,
@@ -98,12 +101,16 @@ const CampoQuestoes = () => {
     }
   }
 
+  const isOptionSelected =
+    perguntas[slide] && respostas[perguntas[slide].id] !== "";
+
+
   return (
     <>
       <FormQuestao onSubmit={(event) => event.preventDefault()}>
         {resultadoFinal === null && (
           <NumeroQuestao>
-            <PalavraQuestao>Questão</PalavraQuestao> {` 0${slide + 1}`}
+            <PalavraQuestao>Questão</PalavraQuestao> {`0${slide + 1}`}
           </NumeroQuestao>
         )}
         {perguntas.map((pergunta, index) => (
@@ -155,18 +162,18 @@ const CampoQuestoes = () => {
                     }}
                   >
                     {perguntas.map((pergunta) => (
-                      <li key={pergunta.id}>
+                      <li key={pergunta.id} style={{ marginBottom: "20px" }}>
                         <Questionamento>{pergunta.pergunta}</Questionamento>
-                        <Resposta>
-                          <Negrito>R:&nbsp;</Negrito> {respostas[pergunta.id]}
-                        </Resposta>
-                        {respostas[pergunta.id] !== pergunta.resposta && (
-                          <>
-                            <span style={{ color: "red" }}>
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                          <Resposta>
+                            <Negrito>R:&nbsp;</Negrito> {respostas[pergunta.id]}
+                          </Resposta>
+                          {respostas[pergunta.id] !== pergunta.resposta && (
+                            <span style={{ color: "red", marginLeft: "10px" }}>
                               Resposta correta: {pergunta.resposta}
                             </span>
-                          </>
-                        )}
+                          )}
+                        </div>
                       </li>
                     ))}
                   </ul>
@@ -175,7 +182,9 @@ const CampoQuestoes = () => {
             </ConteudoResultado>
           </>
         ) : (
-          <BotaoProximo onClick={handleClick}>próximo</BotaoProximo>
+          <BotaoProximo onClick={handleClick} disabled={!isOptionSelected}>
+            próximo
+          </BotaoProximo>
         )}
       </FormQuestao>
     </>

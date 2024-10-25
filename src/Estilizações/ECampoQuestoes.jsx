@@ -62,6 +62,14 @@ export const BotaoProximo = styled.button`
   text-transform: uppercase;
   margin-top: 40px;
   cursor: pointer;
+
+  &:disabled {
+    background-color: hsl(270.11764705882354, 100%, 35%);
+    color: #9D9D9D;
+    cursor: not-allowed; 
+    box-shadow: 0px;
+    opacity: 0.6; 
+  }
 `;
 
 import React from "react";
