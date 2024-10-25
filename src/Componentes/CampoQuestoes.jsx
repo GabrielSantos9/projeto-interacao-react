@@ -1,6 +1,4 @@
 import React from "react";
-import Correto from "../img/correto.svg"; // Ícone de resposta correta
-import Errado from "../img/errado.svg"; // Ícone de resposta errada
 
 import {
   Questao,
