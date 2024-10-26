@@ -29,7 +29,8 @@ import {
   TituloPeR,
   Resposta,
   Negrito,
-} from "../Estilizações/ETesteee";
+  scrollPR,
+} from "../Estilizações/EPerguntasRespostas";
 
 const perguntas = [
   {
@@ -102,7 +103,6 @@ const CampoQuestoes = () => {
   const isOptionSelected =
     perguntas[slide] && respostas[perguntas[slide].id] !== "";
 
-
   return (
     <>
       <FormQuestao onSubmit={(event) => event.preventDefault()}>
@@ -160,7 +160,7 @@ const CampoQuestoes = () => {
                     }}
                   >
                     {perguntas.map((pergunta) => (
-                      <li key={pergunta.id} style={{ marginBottom: "20px" }}>
+                      <li key={pergunta.id} style={{ marginBottom: "15px" }}>
                         <Questionamento>{pergunta.pergunta}</Questionamento>
                         <div style={{ display: "flex", alignItems: "center" }}>
                           <Resposta>

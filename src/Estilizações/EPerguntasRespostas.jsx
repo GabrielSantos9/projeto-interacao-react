@@ -100,6 +100,10 @@ export const PerguntasRespostas = styled.div`
   margin-left: 50px;
   margin-right: 50px;
   flex-direction: column;
+
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
 `;
 
 export const TituloPeR = styled.div`
@@ -149,4 +153,11 @@ export const Negrito = styled.p`
   color: #CCCCCC;
   font-weight: 700;
   font-size: 13px;
+`;
+
+export const scrollPR = styled.div`
+  max-height: 100px; /* Define a altura máxima para o container */
+  overflow-y: auto; /* Adiciona o scroll vertical */
+  padding-right: 10px; /* Espaçamento para scrollbar */
+  /* Outros estilos que já estão aplicados */
 `;
