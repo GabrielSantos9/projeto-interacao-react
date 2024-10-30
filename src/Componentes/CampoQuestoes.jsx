@@ -29,7 +29,9 @@ import {
   TituloPeR,
   Resposta,
   Negrito,
-  scrollPR,
+  Correto,
+  TituloCorreto,
+  RespostaCorreta,
 } from "../Estilizações/EPerguntasRespostas";
 
 const perguntas = [
@@ -162,16 +164,21 @@ const CampoQuestoes = () => {
                     {perguntas.map((pergunta) => (
                       <li key={pergunta.id} style={{ marginBottom: "15px" }}>
                         <Questionamento>{pergunta.pergunta}</Questionamento>
-                        <div style={{ display: "flex", alignItems: "center" }}>
+                        <Correto
+                          style={{ display: "flex", flexDirection: "column" }}
+                        >
                           <Resposta>
                             <Negrito>R:&nbsp;</Negrito> {respostas[pergunta.id]}
                           </Resposta>
                           {respostas[pergunta.id] !== pergunta.resposta && (
-                            <span style={{ color: "red", marginLeft: "10px" }}>
-                              Resposta correta: {pergunta.resposta}
-                            </span>
+                            <>
+                              <TituloCorreto>Correto:</TituloCorreto>
+                              <RespostaCorreta>
+                                {pergunta.resposta}
+                              </RespostaCorreta>
+                            </>
                           )}
-                        </div>
+                        </Correto>
                       </li>
                     ))}
                   </ul>

@@ -104,6 +104,24 @@ export const PerguntasRespostas = styled.div`
   max-height: 300px;
   overflow-y: auto;
   padding-right: 10px;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #a3a3a3;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #484848;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
 `;
 
 export const TituloPeR = styled.div`
@@ -127,7 +145,6 @@ export const TituloPR = styled.h2`
   display: flex;
 `;
 
-
 export const QuestionamentosERespostas = styled.div`
   display: flex;
   margin-top: 10px;
@@ -141,7 +158,7 @@ export const Questionamento = styled.h3`
 `;
 
 export const Resposta = styled.span`
-  color: #CCCCCC;
+  color: #cccccc;
   margin-left: 30px;
   font-weight: 500;
   font-size: 13px;
@@ -150,14 +167,30 @@ export const Resposta = styled.span`
 `;
 
 export const Negrito = styled.p`
-  color: #CCCCCC;
+  color: #cccccc;
   font-weight: 700;
   font-size: 13px;
 `;
 
-export const scrollPR = styled.div`
-  max-height: 100px; /* Define a altura máxima para o container */
-  overflow-y: auto; /* Adiciona o scroll vertical */
-  padding-right: 10px; /* Espaçamento para scrollbar */
-  /* Outros estilos que já estão aplicados */
+export const Correto = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const TituloCorreto = styled.h2`
+  color: #07f507;
+  margin-left: 30px;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  margin-bottom: 15px;
+`;
+
+export const RespostaCorreta = styled.p`
+  color: #cccccc;
+  margin-left: 30px;
+  font-weight: 500;
+  font-size: 13px;
+  display: flex;
+  margin-bottom: 15px;
 `;
