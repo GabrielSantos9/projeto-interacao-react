@@ -1,4 +1,5 @@
 import React from "react";
+import iconeCorreto from "../img/correto.svg";
 
 import {
   Questao,
@@ -32,6 +33,7 @@ import {
   Correto,
   TituloCorreto,
   RespostaCorreta,
+  ValorCorreto,
 } from "../Estilizações/EPerguntasRespostas";
 
 const perguntas = [
@@ -172,10 +174,17 @@ const CampoQuestoes = () => {
                           </Resposta>
                           {respostas[pergunta.id] !== pergunta.resposta && (
                             <>
-                              <TituloCorreto>Correto:</TituloCorreto>
-                              <RespostaCorreta>
-                                {pergunta.resposta}
-                              </RespostaCorreta>
+                              <ValorCorreto>
+                                <img
+                                  src={iconeCorreto}
+                                  alt="ea"
+                                  style={{ width: "14px", height: "14px" }}
+                                />
+
+                                <RespostaCorreta>
+                                  {pergunta.resposta}
+                                </RespostaCorreta>
+                              </ValorCorreto>
                             </>
                           )}
                         </Correto>

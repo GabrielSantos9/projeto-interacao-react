@@ -163,7 +163,7 @@ export const Resposta = styled.span`
   font-weight: 500;
   font-size: 13px;
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 `;
 
 export const Negrito = styled.p`
@@ -183,14 +183,18 @@ export const TituloCorreto = styled.h2`
   font-weight: 700;
   font-size: 13px;
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 `;
 
 export const RespostaCorreta = styled.p`
   color: #cccccc;
-  margin-left: 30px;
+  margin-left: 3px;
   font-weight: 500;
   font-size: 13px;
   display: flex;
-  margin-bottom: 15px;
+`;
+
+export const ValorCorreto = styled.div`
+  display: flex;
+  margin-left: 30px;
 `;
