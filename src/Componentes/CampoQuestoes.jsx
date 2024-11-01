@@ -1,5 +1,6 @@
 import React from "react";
 import iconeCorreto from "../img/correto.svg";
+import iconeIncorreto from "../img/errado.svg";
 
 import {
   Questao,
@@ -177,7 +178,7 @@ const CampoQuestoes = () => {
                               <ValorCorreto>
                                 <img
                                   src={iconeCorreto}
-                                  alt="ea"
+                                  alt="icone-correto"
                                   style={{ width: "14px", height: "14px" }}
                                 />
 
