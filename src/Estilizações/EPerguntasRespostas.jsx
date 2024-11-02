@@ -159,7 +159,7 @@ export const Questionamento = styled.h3`
 
 export const Resposta = styled.span`
   color: #cccccc;
-  margin-left: 30px;
+  margin-left: 14px;
   font-weight: 500;
   font-size: 13px;
   display: flex;
@@ -177,18 +177,8 @@ export const Correto = styled.div`
   flex-direction: column;
 `;
 
-export const TituloCorreto = styled.h2`
-  color: #07f507;
-  margin-left: 30px;
-  font-weight: 700;
-  font-size: 13px;
-  display: flex;
-  margin-bottom: 5px;
-`;
-
 export const RespostaCorreta = styled.p`
   color: #cccccc;
-  margin-left: 3px;
   font-weight: 500;
   font-size: 13px;
   display: flex;
@@ -196,5 +186,5 @@ export const RespostaCorreta = styled.p`
 
 export const ValorCorreto = styled.div`
   display: flex;
-  margin-left: 30px;
+  margin-left: 14px;
 `;

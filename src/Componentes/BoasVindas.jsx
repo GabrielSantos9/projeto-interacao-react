@@ -7,7 +7,7 @@ import {
   ParagrafoComprimento,
   BotaoIniciarQuestionamentos,
 } from "../Estilizações/EBoasVindas";
-import CampoQuestoes from "../Componentes/CampoQuestoes";
+import CampoQuestoes from "./CampoQuestoes";
 
 const BoasVindas = ({ StorageName }) => {
   const [TelaQuestoes, setTelaQuestoes] = useState(false);

@@ -32,7 +32,6 @@ import {
   Resposta,
   Negrito,
   Correto,
-  TituloCorreto,
   RespostaCorreta,
   ValorCorreto,
 } from "../Estilizações/EPerguntasRespostas";
@@ -170,23 +169,37 @@ const CampoQuestoes = () => {
                         <Correto
                           style={{ display: "flex", flexDirection: "column" }}
                         >
-                          <Resposta>
+                          <Resposta
+                            style={{ display: "flex", alignItems: "center" }}
+                          >
+                            {respostas[pergunta.id] !== pergunta.resposta && (
+                              <img
+                                src={iconeIncorreto}
+                                alt="icone-incorreto"
+                                style={{
+                                  width: "14px",
+                                  height: "14px",
+                                  marginRight: "3px",
+                                }}
+                              />
+                            )}
                             <Negrito>R:&nbsp;</Negrito> {respostas[pergunta.id]}
                           </Resposta>
                           {respostas[pergunta.id] !== pergunta.resposta && (
-                            <>
-                              <ValorCorreto>
+                            <ValorCorreto>
+                              <RespostaCorreta>
                                 <img
                                   src={iconeCorreto}
                                   alt="icone-correto"
-                                  style={{ width: "14px", height: "14px" }}
+                                  style={{
+                                    width: "14px",
+                                    height: "14px",
+                                    marginRight: "3px",
+                                  }}
                                 />
-
-                                <RespostaCorreta>
-                                  {pergunta.resposta}
-                                </RespostaCorreta>
-                              </ValorCorreto>
-                            </>
+                                {pergunta.resposta}
+                              </RespostaCorreta>
+                            </ValorCorreto>
                           )}
                         </Correto>
                       </li>
