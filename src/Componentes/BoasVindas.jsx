@@ -19,7 +19,7 @@ const BoasVindas = ({ StorageName }) => {
   return (
     <>
       {!TelaQuestoes && (
-        <Comprimento onClick={handleScreen}>
+        <Comprimento>
           <TituloBoasVindas>Boas vindas!</TituloBoasVindas>
           <ComprimentoNome>
             Olá,

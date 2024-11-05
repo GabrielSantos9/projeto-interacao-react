@@ -94,7 +94,7 @@ export const QuantidadeErros = styled.div`
 
 export const PerguntasRespostas = styled.div`
   width: 640px;
-  height: 175px;
+  height: 144px;
   display: flex;
   margin-top: 45px;
   margin-left: 50px;
@@ -155,6 +155,7 @@ export const Questionamento = styled.h3`
   font-weight: 700;
   margin-left: 14px;
   color: white;
+  margin-bottom: 3px;
 `;
 
 export const Resposta = styled.span`
@@ -187,4 +188,19 @@ export const RespostaCorreta = styled.p`
 export const ValorCorreto = styled.div`
   display: flex;
   margin-left: 14px;
+`;
+
+export const BotaoReiniciar = styled.h3`
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-top: 68px;
+  cursor: pointer;
+
+  &:hover {
+    transition: 0.9s;
+    color: #8000FF;
+    font-weight: 700;
+  }
 `;

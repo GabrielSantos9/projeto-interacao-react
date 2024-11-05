@@ -34,6 +34,7 @@ import {
   Correto,
   RespostaCorreta,
   ValorCorreto,
+  BotaoReiniciar,
 } from "../Estilizações/EPerguntasRespostas";
 
 const perguntas = [
@@ -207,6 +208,9 @@ const CampoQuestoes = () => {
                   </ul>
                 </QuestionamentosERespostas>
               </PerguntasRespostas>
+              <BotaoReiniciar onClick={() => window.location.reload()}>
+                Reiniciar
+              </BotaoReiniciar>
             </ConteudoResultado>
           </>
         ) : (
