@@ -35,7 +35,7 @@ import {
   RespostaCorreta,
   ValorCorreto,
   BotaoReiniciar,
-} from "../Estilizações/EPerguntasRespostas";
+} from "../Estilizações/EEstatisticas";
 
 const perguntas = [
   {
