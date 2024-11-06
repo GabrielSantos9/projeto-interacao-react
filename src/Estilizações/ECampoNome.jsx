@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import nomeSVG from "../img/NomeSVG.svg";
+import {breakpoints} from "../Estilizações/breakpoints";
 
 export const CampoNome = styled.form`
   display: flex;
@@ -10,6 +11,10 @@ export const CampoNome = styled.form`
   justify-content: center;
   padding: 64px 36px 70px 36px;
   position: relative;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    background-color: red;
+  }
 `;
 
 export const LabelNome = styled.label`
