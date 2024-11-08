@@ -7,7 +7,7 @@ import {
   Paragrafo,
   CorReact,
   ExemploNome,
-} from "../Estilizações/EIntroducao";
+} from "../Estilizações/eIntroducao";
 
 import {
   CampoNome,
@@ -17,7 +17,7 @@ import {
   InputWrapper,
   Icon,
   PreencherNome,
-} from "../Estilizações/ECampoNome";
+} from "../Estilizações/eCampoNome";
 
 const Introducao = ({ StorageName, setStorageName, onClick }) => {
   const handleChange = (event) => {

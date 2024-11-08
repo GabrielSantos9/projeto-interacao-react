@@ -8,7 +8,7 @@ import {
   BotaoProximo,
   PalavraQuestao,
   NumeroQuestao,
-} from "../Estilizações/ECampoQuestoes";
+} from "../Estilizações/eCampoQuestoes";
 
 import {
   ConteudoResultado,
@@ -35,7 +35,7 @@ import {
   RespostaCorreta,
   ValorCorreto,
   BotaoReiniciar,
-} from "../Estilizações/EEstatisticas";
+} from "../Estilizações/eEstatisticas";
 
 const perguntas = [
   {

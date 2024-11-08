@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import nomeSVG from "../img/NomeSVG.svg";
-import {breakpoints} from "../Estilizações/breakpoints";
 
 export const CampoNome = styled.form`
   display: flex;
@@ -11,11 +10,11 @@ export const CampoNome = styled.form`
   justify-content: center;
   padding: 64px 36px 70px 36px;
   position: relative;
-
-  @media (max-width: ${breakpoints.desktop}) {
-    background-color: red;
+  
+  @media (max-width: 1024px) {
+    padding: 70px 36px 70px 36px;
   }
-`;
+  `;
 
 export const LabelNome = styled.label`
   color: #f5f5f5;
@@ -23,6 +22,10 @@ export const LabelNome = styled.label`
   font-size: 15px;
   display: flex;
   margin-left: -240px;
+
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
 `;
 
 export const InputWrapper = styled.div`
@@ -61,16 +64,12 @@ export const PreencherNome = styled.input`
     border: 0.5px solid #8000ff4e;
     transition: 0.9s;
   }
-`;
 
-export const PreencherTeste = styled.input`
-  width: 318px;
-  height: 40px;
-  border-radius: 4px;
-  outline: none;
-  background-color: hsl(0deg 0% 16% / 70%);
-  color: white;
-  margin-top: 6px;
+  @media (max-width: 1024px) {
+    width: 318px;
+    height: 40px;
+
+  }
 `;
 
 export const BotaoProximo = styled.button`

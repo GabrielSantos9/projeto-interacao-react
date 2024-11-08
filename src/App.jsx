@@ -23,15 +23,6 @@ const ConteudoGeral = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-`;
-
-const ConteudoPrincipal = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
 `;
 
 const App = () => {
@@ -48,7 +39,6 @@ const App = () => {
     <>
       <GlobalStyle />
       <ConteudoGeral>
-        <ConteudoPrincipal>
           {!showCampoQuestoes && (
             <Introducao
               StorageName={StorageName}
@@ -59,7 +49,6 @@ const App = () => {
           {showCampoQuestoes && (
             <BoasVindas StorageName={StorageName} onClick={handleNextClick} />
           )}
-        </ConteudoPrincipal>
       </ConteudoGeral>
     </>
   );

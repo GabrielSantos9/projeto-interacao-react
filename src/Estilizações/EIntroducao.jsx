@@ -7,6 +7,12 @@ export const Intro = styled.div`
   flex-direction: column;
   margin-right: 129px;
   justify-content: center;
+
+  @media (max-width: 1024px) {
+    width: 338px;
+    height: 256px;
+    margin-right: 70px;
+  }
 `;
 
 export const Titulo = styled.h1`
@@ -16,6 +22,11 @@ export const Titulo = styled.h1`
   flex-direction: column;
   font-weight: 700;
   margin-bottom: 26px;
+
+  @media (max-width: 1024px) {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
 `;
 
 export const Paragrafo = styled.p`
@@ -23,6 +34,11 @@ export const Paragrafo = styled.p`
   font-size: 23px;
   font-weight: 500;
   width: 379px;
+
+  @media (max-width: 1024px) {
+    width: 338px;
+    font-size: 18px;
+  }
 `;
 
 export const CorReact = styled.span`

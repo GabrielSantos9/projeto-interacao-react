@@ -6,7 +6,7 @@ import {
   CorNome,
   ParagrafoComprimento,
   BotaoIniciarQuestionamentos,
-} from "../Estilizações/EBoasVindas";
+} from "../Estilizações/eBoasVindas";
 import CampoQuestoes from "./CampoQuestoes";
 
 const BoasVindas = ({ StorageName }) => {

@@ -5,7 +5,7 @@ import {
   SvgNome,
   BotaoProximo,
   PreencherInput,
-} from "../Estilizações/ECampoNome";
+} from "../Estilizações/eCampoNome";
 
 const FormNome = ({ onNext }) => {
   return (
