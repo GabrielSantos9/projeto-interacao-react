@@ -13,6 +13,10 @@ export const Intro = styled.div`
     height: 256px;
     margin-right: 70px;
   }
+
+  @media (max-width: 820px) {
+    
+  }
 `;
 
 export const Titulo = styled.h1`

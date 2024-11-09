@@ -24,7 +24,7 @@ export const LabelNome = styled.label`
   margin-left: -240px;
 
   @media (max-width: 1024px) {
-    font-size: 14px;
+    font-size: 15px;
   }
 `;
 
@@ -59,6 +59,7 @@ export const PreencherNome = styled.input`
   background-color: hsl(0deg 0% 16% / 70%);
   color: white;
   margin-top: 6px;
+  font-size: 15px;
 
   &:focus {
     border: 0.5px solid #8000ff4e;

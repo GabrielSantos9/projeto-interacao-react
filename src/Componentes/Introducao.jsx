@@ -45,33 +45,33 @@ const Introducao = ({ StorageName, setStorageName, onClick }) => {
 
   return (
     <>
-      <Intro>
-        <Titulo>
-          Olá, seja bem vindo no meu primeiro projeto utilizando{" "}
-          <CorReact>React</CorReact>!
-        </Titulo>
-        <Paragrafo>
-          Antes de começar alguns questionamentos básicos sobre o React, será
-          necessário dizer o seu <ExemploNome>Nome</ExemploNome>!
-        </Paragrafo>
-      </Intro>
-      <CampoNome>
-        <SvgNome />
-        <LabelNome htmlFor="nome">Seu nome</LabelNome>
-        <InputWrapper>
-          <Icon src={iconeUsuario} alt="search-icon"></Icon>
-          <PreencherNome
-            id="nome"
-            type="text"
-            name="nome"
-            value={StorageName}
-            onChange={handleChange}
-          ></PreencherNome>
-        </InputWrapper>
-        <BotaoProximo type="button" onClick={handleSubmit}>
-          próximo
-        </BotaoProximo>
-      </CampoNome>
+        <Intro>
+          <Titulo>
+            Olá, seja bem vindo no meu primeiro projeto utilizando{" "}
+            <CorReact>React</CorReact>!
+          </Titulo>
+          <Paragrafo>
+            Antes de começar alguns questionamentos básicos sobre o React, será
+            necessário dizer o seu <ExemploNome>Nome</ExemploNome>!
+          </Paragrafo>
+        </Intro>
+        <CampoNome>
+          <SvgNome />
+          <LabelNome htmlFor="nome">Seu nome</LabelNome>
+          <InputWrapper>
+            <Icon src={iconeUsuario} alt="search-icon"></Icon>
+            <PreencherNome
+              id="nome"
+              type="text"
+              name="nome"
+              value={StorageName}
+              onChange={handleChange}
+            ></PreencherNome>
+          </InputWrapper>
+          <BotaoProximo type="button" onClick={handleSubmit}>
+            próximo
+          </BotaoProximo>
+        </CampoNome>
     </>
   );
 };
