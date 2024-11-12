@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+export const ConteudoIntrodutorio = styled.div`
+  display: flex;
+
+  @media (max-width: 820px) {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 338px;
+  }
+`;
+
 export const Intro = styled.div`
   width: 473px;
   height: 334px;
@@ -15,7 +26,8 @@ export const Intro = styled.div`
   }
 
   @media (max-width: 820px) {
-    
+    margin-right: 0px;
+    margin-bottom: 45px;
   }
 `;
 
@@ -29,6 +41,10 @@ export const Titulo = styled.h1`
 
   @media (max-width: 1024px) {
     font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 820px) {
     margin-bottom: 12px;
   }
 `;

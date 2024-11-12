@@ -10,11 +10,11 @@ export const CampoNome = styled.form`
   justify-content: center;
   padding: 64px 36px 70px 36px;
   position: relative;
-  
+
   @media (max-width: 1024px) {
     padding: 70px 36px 70px 36px;
   }
-  `;
+`;
 
 export const LabelNome = styled.label`
   color: #f5f5f5;
@@ -25,6 +25,10 @@ export const LabelNome = styled.label`
 
   @media (max-width: 1024px) {
     font-size: 15px;
+  }
+
+  @media (max-width: 820px) {
+    margin-left: -180px;
   }
 `;
 
@@ -69,7 +73,12 @@ export const PreencherNome = styled.input`
   @media (max-width: 1024px) {
     width: 318px;
     height: 40px;
+  }
 
+  @media (max-width: 820px) {
+    width: 258px;
+    height: 35px;
+    margin-top: 7px;
   }
 `;
 
@@ -89,7 +98,12 @@ export const BotaoProximo = styled.button`
   text-transform: uppercase;
 
   &:hover {
-    box-shadow: 0px 4px 54.4px 0px #8000FF;
+    box-shadow: 0px 4px 54.4px 0px #8000ff;
     transition: 0.4s;
+  }
+
+  @media (max-width: 820px) {
+    width: 258px;
+    height: 35px;
   }
 `;

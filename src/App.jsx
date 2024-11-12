@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import Introducao from "../src/Componentes/Introducao";
 import BoasVindas from "./Componentes/BoasVindas";
 
+
 const GlobalStyle = createGlobalStyle`
 * {
   border: 0;
