@@ -129,8 +129,8 @@ const CampoQuestoes = () => {
           <>
             <ConteudoResultado>
               <BarraSuperior>
-                <Circle style={{ marginRight: "9px", marginLeft: "20px" }} />
-                <Circle style={{ marginRight: "9px" }} />
+                <Circle style={{ marginRight: "6px", marginLeft: "20px" }} />
+                <Circle style={{ marginRight: "6px" }} />
                 <Circle />
               </BarraSuperior>
               <TituloResultados>Resultados</TituloResultados>

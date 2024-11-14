@@ -19,7 +19,7 @@ export const PalavraQuestao = styled.h1`
 `;
 
 export const NumeroQuestao = styled.span`
-  color: #8000FF;
+  color: #8000ff;
   font-size: 40px;
   font-weight: 700;
   display: flex;
@@ -34,6 +34,11 @@ export const Fieldset = styled.fieldset`
   flex-direction: column;
   justify-content: center;
   color: white;
+
+  @media (max-width: 820px) {
+    width: 620px;
+    height: 300px;
+  }
 `;
 
 export const Legend = styled.legend`
@@ -44,6 +49,13 @@ export const Legend = styled.legend`
   padding-left: 15px;
   padding-right: 20px;
   margin-bottom: 66px;
+
+  @media (max-width: 820px) {
+    font-size: 18px;
+    margin-left: 30px;
+    padding-left: 20px;
+    margin-bottom: 70px;
+  }
 `;
 
 export const BotaoProximo = styled.button`
@@ -65,10 +77,22 @@ export const BotaoProximo = styled.button`
 
   &:disabled {
     background-color: hsl(270.11764705882354, 100%, 35%);
-    color: #9D9D9D;
-    cursor: not-allowed; 
+    color: #9d9d9d;
+    cursor: not-allowed;
     box-shadow: 0px;
-    opacity: 0.6; 
+    opacity: 0.6;
+  }
+`;
+export const Rotulo = styled.label`
+  margin: flex;
+  display: flex;
+  margin-left: 60px;
+  font-size: 18px;
+  margin-bottom: 32px;
+
+  @media (max-width: 820px) {
+    margin-left: 70px;
+    font-size: 16px;
   }
 `;
 
@@ -80,16 +104,7 @@ export const Questao = ({ pergunta, options, onChange, value, id, active }) => {
     <Fieldset>
       <Legend>{pergunta}</Legend>
       {options.map((option) => (
-        <label
-          key={option}
-          style={{
-            margin: "flex",
-            display: "flex",
-            marginLeft: "60px",
-            fontSize: "18px",
-            marginBottom: "32px",
-          }}
-        >
+        <Rotulo key={option}>
           <input
             type="radio"
             id={id}
@@ -98,12 +113,10 @@ export const Questao = ({ pergunta, options, onChange, value, id, active }) => {
             onChange={onChange}
           />
           {option}
-        </label>
+        </Rotulo>
       ))}
     </Fieldset>
   );
 };
-
-
 
 export default Questao;

@@ -7,6 +7,10 @@ export const ConteudoResultado = styled.div`
   background-color: #1f1f1f;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 820px) {
+    width: 620px;
+  }
 `;
 
 export const BarraSuperior = styled.div`
@@ -15,6 +19,10 @@ export const BarraSuperior = styled.div`
   background-color: #6c63ff;
   display: flex;
   align-items: center;
+
+  @media (max-width: 820px) {
+    width: 620px;
+  }
 `;
 
 export const Circle = styled.div`
@@ -42,6 +50,10 @@ export const NumeroPerguntas = styled.div`
   height: 100px;
   border-radius: 15px;
   background-color: #2a2a2a;
+
+  @media (max-width: 820px) {
+    width: 141px;
+  }
 `;
 
 export const NumeroAcertos = styled.div`
@@ -50,6 +62,10 @@ export const NumeroAcertos = styled.div`
   margin: 0px 50px;
   border-radius: 15px;
   background-color: #2f2f2f;
+
+  @media (max-width: 820px) {
+    width: 141px;
+  }
 `;
 
 export const NumeroErros = styled.div`
@@ -57,6 +73,10 @@ export const NumeroErros = styled.div`
   height: 100px;
   border-radius: 15px;
   background-color: #2a2a2a;
+
+  @media (max-width: 820px) {
+    width: 141px;
+  }
 `;
 
 export const TipoEstatisticas = styled.div`
@@ -122,11 +142,22 @@ export const PerguntasRespostas = styled.div`
   &::-webkit-scrollbar-thumb:hover {
     background-color: #555;
   }
+
+  @media (max-width: 820px) {
+    width: 570px;
+    margin-right: 0px;
+
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 `;
 
 export const TituloPeR = styled.div`
   display: flex;
   align-items: center;
+
+  @media (max-width: 820px) {
+  }
 `;
 
 export const CirclePR = styled.div`
@@ -200,7 +231,7 @@ export const BotaoReiniciar = styled.h3`
 
   &:hover {
     transition: 0.9s;
-    color: #8000FF;
+    color: #8000ff;
     font-weight: 700;
   }
 `;
