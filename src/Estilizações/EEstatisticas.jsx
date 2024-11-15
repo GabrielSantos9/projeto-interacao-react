@@ -7,6 +7,7 @@ export const ConteudoResultado = styled.div`
   background-color: #1f1f1f;
   flex-direction: column;
   align-items: center;
+  border-radius: 10px 10px 10px 10px;
 
   @media (max-width: 820px) {
     width: 620px;
@@ -19,6 +20,7 @@ export const BarraSuperior = styled.div`
   background-color: #6c63ff;
   display: flex;
   align-items: center;
+  border-radius: 10px 10px 0px 0px;
 
   @media (max-width: 820px) {
     width: 620px;
@@ -146,7 +148,6 @@ export const PerguntasRespostas = styled.div`
   @media (max-width: 820px) {
     width: 570px;
     margin-right: 0px;
-
     margin-left: 0px;
     margin-right: 0px;
   }

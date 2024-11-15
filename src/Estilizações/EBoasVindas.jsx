@@ -9,6 +9,10 @@ export const Comprimento = styled.div`
   background-color: hsl(0deg 0% 0% / 29%);
   align-items: center;
   border-radius: 10px;
+
+  @media (max-width: 635px) {
+    width: 375px;
+  }
 `;
 
 export const TituloBoasVindas = styled.h1`

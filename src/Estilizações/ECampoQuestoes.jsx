@@ -16,6 +16,10 @@ export const PalavraQuestao = styled.h1`
   font-weight: 700;
   margin-bottom: 80px;
   margin-right: 8px;
+
+  @media (max-width: 635px) {
+    margin-bottom: 90px;
+  }
 `;
 
 export const NumeroQuestao = styled.span`
@@ -25,7 +29,7 @@ export const NumeroQuestao = styled.span`
   display: flex;
 `;
 
-export const Fieldset = styled.fieldset`
+export const CampoPergunta = styled.fieldset`
   border: 2px solid rgba(31, 31, 31, 62);
   border-radius: 8px;
   width: 800px;
@@ -39,9 +43,15 @@ export const Fieldset = styled.fieldset`
     width: 620px;
     height: 300px;
   }
+
+  @media (max-width: 635px) {
+    width: 415px;
+    height: 160px;
+    border: 0px;
+  }
 `;
 
-export const Legend = styled.legend`
+export const Pergunta = styled.legend`
   font-weight: bold;
   font-size: 23px;
   color: white;
@@ -55,6 +65,14 @@ export const Legend = styled.legend`
     margin-left: 30px;
     padding-left: 20px;
     margin-bottom: 70px;
+  }
+
+  @media (max-width: 635px) {
+    font-size: 16px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 30px;
   }
 `;
 
@@ -82,9 +100,12 @@ export const BotaoProximo = styled.button`
     box-shadow: 0px;
     opacity: 0.6;
   }
+
+  @media (max-width: 635px) {
+    margin-top: 45px;
+  }
 `;
 export const Rotulo = styled.label`
-  margin: flex;
   display: flex;
   margin-left: 60px;
   font-size: 18px;
@@ -94,6 +115,12 @@ export const Rotulo = styled.label`
     margin-left: 70px;
     font-size: 16px;
   }
+
+  @media (max-width: 635px) {
+    margin-bottom: 25px;
+    display: flex;
+    margin-left: 0px;
+  }
 `;
 
 import React from "react";
@@ -101,8 +128,8 @@ import React from "react";
 export const Questao = ({ pergunta, options, onChange, value, id, active }) => {
   if (active === false) return null;
   return (
-    <Fieldset>
-      <Legend>{pergunta}</Legend>
+    <CampoPergunta>
+      <Pergunta>{pergunta}</Pergunta>
       {options.map((option) => (
         <Rotulo key={option}>
           <input
@@ -115,7 +142,7 @@ export const Questao = ({ pergunta, options, onChange, value, id, active }) => {
           {option}
         </Rotulo>
       ))}
-    </Fieldset>
+    </CampoPergunta>
   );
 };
 
