@@ -1,5 +1,29 @@
 import styled from "styled-components";
 
+export const BarraSuperior = styled.div`
+  width: 740px;
+  height: 36px;
+  background-color: #6c63ff;
+  display: flex;
+  align-items: center;
+  border-radius: 10px 10px 0px 0px;
+
+  @media (max-width: 820px) {
+    width: 620px;
+  }
+
+  @media (max-width: 635px) {
+    width: 380px;
+  }
+`;
+
+export const Circle = styled.div`
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: white;
+`;
+
 export const ConteudoResultado = styled.div`
   width: 740px;
   height: 518px;
@@ -12,26 +36,11 @@ export const ConteudoResultado = styled.div`
   @media (max-width: 820px) {
     width: 620px;
   }
-`;
 
-export const BarraSuperior = styled.div`
-  width: 740px;
-  height: 36px;
-  background-color: #6c63ff;
-  display: flex;
-  align-items: center;
-  border-radius: 10px 10px 0px 0px;
-
-  @media (max-width: 820px) {
-    width: 620px;
+  @media (max-width: 635px) {
+    width: 380px;
+    height: 596px;
   }
-`;
-
-export const Circle = styled.div`
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background-color: white;
 `;
 
 export const TituloResultados = styled.h1`
@@ -40,11 +49,25 @@ export const TituloResultados = styled.h1`
   color: white;
   display: flex;
   margin-top: 30px;
+
+  @media (max-width: 635px) {
+    margin-top: 25px;
+  }
 `;
 
 export const Estatisticas = styled.div`
   display: flex;
-  padding-top: 20px;
+  margin-top: 20px;
+
+  @media (max-width: 635px) {
+    margin-top: 30px;
+    margin-bottom: 32px;
+    flex-direction: column;
+
+    width: 86px;
+    height: 182px;
+    align-items: center;
+  }
 `;
 
 export const NumeroPerguntas = styled.div`
@@ -55,6 +78,13 @@ export const NumeroPerguntas = styled.div`
 
   @media (max-width: 820px) {
     width: 141px;
+  }
+
+  @media (max-width: 635px) {
+    width: 86px;
+    height: 54px;
+    margin-bottom: 10px;
+    background-color: #1f1f1f;
   }
 `;
 
@@ -68,6 +98,13 @@ export const NumeroAcertos = styled.div`
   @media (max-width: 820px) {
     width: 141px;
   }
+
+  @media (max-width: 635px) {
+    width: 86px;
+    height: 54px;
+    margin-bottom: 10px;
+    background-color: #1f1f1f;
+  }
 `;
 
 export const NumeroErros = styled.div`
@@ -79,6 +116,13 @@ export const NumeroErros = styled.div`
   @media (max-width: 820px) {
     width: 141px;
   }
+
+  @media (max-width: 635px) {
+    width: 86px;
+    height: 54px;
+    margin-bottom: 10px;
+    background-color: #1f1f1f;
+  }
 `;
 
 export const TipoEstatisticas = styled.div`
@@ -88,6 +132,11 @@ export const TipoEstatisticas = styled.div`
   display: flex;
   justify-content: center;
   margin: 10px 32px 6px 32px;
+
+  @media (max-width: 635px) {
+    margin: 0px;
+    margin-bottom: 5px;
+  }
 `;
 
 export const QuantidadePerguntas = styled.div`
@@ -96,6 +145,10 @@ export const QuantidadePerguntas = styled.div`
   display: flex;
   justify-content: center;
   color: #ab6de9;
+
+  @media (max-width: 635px) {
+    font-size: 24px;
+  }
 `;
 
 export const QuantidadeAcertos = styled.div`
@@ -104,6 +157,10 @@ export const QuantidadeAcertos = styled.div`
   display: flex;
   justify-content: center;
   color: #93f597;
+
+  @media (max-width: 635px) {
+    font-size: 24px;
+  }
 `;
 
 export const QuantidadeErros = styled.div`
@@ -112,6 +169,10 @@ export const QuantidadeErros = styled.div`
   display: flex;
   justify-content: center;
   color: #f45050;
+
+  @media (max-width: 635px) {
+    font-size: 24px;
+  }
 `;
 
 export const PerguntasRespostas = styled.div`
