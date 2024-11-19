@@ -212,14 +212,17 @@ export const PerguntasRespostas = styled.div`
     margin-left: 0px;
     margin-right: 0px;
   }
+
+  @media (max-width: 635px) {
+    margin-top: 0px;
+    width: 327px;
+    height: 173px;
+  }
 `;
 
 export const TituloPeR = styled.div`
   display: flex;
   align-items: center;
-
-  @media (max-width: 820px) {
-  }
 `;
 
 export const CirclePR = styled.div`
@@ -236,6 +239,10 @@ export const TituloPR = styled.h2`
   color: white;
   font-weight: 700;
   display: flex;
+
+  @media (max-width: 820px) {
+  font-size: 16px;
+  }
 `;
 
 export const QuestionamentosERespostas = styled.div`
@@ -249,6 +256,10 @@ export const Questionamento = styled.h3`
   margin-left: 14px;
   color: white;
   margin-bottom: 3px;
+
+  @media (max-width: 635px) {
+    font-size: 14px;
+  }
 `;
 
 export const Resposta = styled.span`
@@ -295,5 +306,9 @@ export const BotaoReiniciar = styled.h3`
     transition: 0.9s;
     color: #8000ff;
     font-weight: 700;
+  }
+
+  @media (max-width: 635px) {
+    margin-top: 34px;
   }
 `;
