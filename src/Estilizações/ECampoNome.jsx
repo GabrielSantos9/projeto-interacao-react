@@ -14,6 +14,13 @@ export const CampoNome = styled.form`
   @media (max-width: 1024px) {
     padding: 70px 36px 70px 36px;
   }
+
+  @media (max-width: 435px) {
+    padding: 0px 0px 0px 0px;
+    width: 282px;
+    height: 298px;
+    display: flex;
+  }
 `;
 
 export const LabelNome = styled.label`
@@ -29,6 +36,10 @@ export const LabelNome = styled.label`
 
   @media (max-width: 820px) {
     margin-left: -180px;
+  }
+
+  @media (max-width: 435px) {
+    margin-left: -160px;
   }
 `;
 
@@ -50,6 +61,11 @@ export const SVG = styled.img`
   width: 126px;
   height: 52px;
   top: -33px;
+
+  @media (max-width: 435px) {
+    width: 89px;
+    height: 35px;
+  }
 `;
 
 export const SvgNome = () => <SVG src={nomeSVG} alt="teste1"></SVG>;
@@ -80,6 +96,10 @@ export const PreencherNome = styled.input`
     height: 35px;
     margin-top: 7px;
   }
+
+  @media (max-width: 435px) {
+    width: 242px;
+  }
 `;
 
 export const BotaoProximo = styled.button`
@@ -105,5 +125,13 @@ export const BotaoProximo = styled.button`
   @media (max-width: 820px) {
     width: 258px;
     height: 35px;
+  }
+
+  @media (max-width: 435px) {
+    width: 242px;
+  }
+
+  @media (max-width: 435px) {
+    font-size: 16px;
   }
 `;

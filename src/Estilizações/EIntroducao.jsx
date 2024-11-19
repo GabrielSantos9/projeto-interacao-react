@@ -9,6 +9,10 @@ export const ConteudoIntrodutorio = styled.div`
     flex-direction: column;
     width: 338px;
   }
+
+  @media (max-width: 435px) {
+    align-items: center;
+  }
 `;
 
 export const Intro = styled.div`
@@ -29,6 +33,12 @@ export const Intro = styled.div`
     margin-right: 0px;
     margin-bottom: 45px;
   }
+
+  @media (max-width: 435px) {
+    width: 338px;
+    height: 181px;
+    margin-bottom: 65px;
+  }
 `;
 
 export const Titulo = styled.h1`
@@ -47,6 +57,10 @@ export const Titulo = styled.h1`
   @media (max-width: 820px) {
     margin-bottom: 12px;
   }
+
+  @media (max-width: 435px) {
+    font-size: 24px;
+  }
 `;
 
 export const Paragrafo = styled.p`
@@ -58,6 +72,10 @@ export const Paragrafo = styled.p`
   @media (max-width: 1024px) {
     width: 338px;
     font-size: 18px;
+  }
+
+  @media (max-width: 435px) {
+    font-size: 17px;
   }
 `;
 
