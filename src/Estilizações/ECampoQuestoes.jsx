@@ -20,6 +20,11 @@ export const PalavraQuestao = styled.h1`
   @media (max-width: 635px) {
     margin-bottom: 90px;
   }
+
+  @media (max-width: 430px) {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
 `;
 
 export const NumeroQuestao = styled.span`
@@ -27,6 +32,10 @@ export const NumeroQuestao = styled.span`
   font-size: 40px;
   font-weight: 700;
   display: flex;
+
+  @media (max-width: 430px) {
+    font-size: 32px;
+  }
 `;
 
 export const CampoPergunta = styled.fieldset`
@@ -48,6 +57,10 @@ export const CampoPergunta = styled.fieldset`
     width: 415px;
     height: 160px;
     border: 0px;
+  }
+
+  @media (max-width: 430px) {
+    width: 248px;
   }
 `;
 
@@ -73,6 +86,10 @@ export const Pergunta = styled.legend`
     padding-left: 0px;
     padding-right: 0px;
     margin-bottom: 30px;
+  }
+
+  @media (max-width: 430px) {
+    margin-bottom: 20px;
   }
 `;
 
@@ -104,6 +121,10 @@ export const BotaoProximo = styled.button`
   @media (max-width: 635px) {
     margin-top: 45px;
   }
+
+  @media (max-width: 430px) {
+    margin-top: 40px;
+  }
 `;
 export const Rotulo = styled.label`
   display: flex;
@@ -120,6 +141,10 @@ export const Rotulo = styled.label`
     margin-bottom: 25px;
     display: flex;
     margin-left: 0px;
+  }
+
+  @media (max-width: 430px) {
+    margin-bottom: 28px;
   }
 `;
 

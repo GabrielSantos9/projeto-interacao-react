@@ -10,7 +10,7 @@ export const ConteudoIntrodutorio = styled.div`
     width: 338px;
   }
 
-  @media (max-width: 435px) {
+  @media (max-width: 430px) {
     align-items: center;
   }
 `;
@@ -34,7 +34,7 @@ export const Intro = styled.div`
     margin-bottom: 45px;
   }
 
-  @media (max-width: 435px) {
+  @media (max-width: 430px) {
     width: 338px;
     height: 181px;
     margin-bottom: 65px;
@@ -58,7 +58,7 @@ export const Titulo = styled.h1`
     margin-bottom: 12px;
   }
 
-  @media (max-width: 435px) {
+  @media (max-width: 430px) {
     font-size: 24px;
   }
 `;
@@ -74,7 +74,7 @@ export const Paragrafo = styled.p`
     font-size: 18px;
   }
 
-  @media (max-width: 435px) {
+  @media (max-width: 430px) {
     font-size: 17px;
   }
 `;

@@ -15,7 +15,7 @@ export const CampoNome = styled.form`
     padding: 70px 36px 70px 36px;
   }
 
-  @media (max-width: 435px) {
+  @media (max-width: 430px) {
     padding: 0px 0px 0px 0px;
     width: 282px;
     height: 298px;
@@ -38,7 +38,7 @@ export const LabelNome = styled.label`
     margin-left: -180px;
   }
 
-  @media (max-width: 435px) {
+  @media (max-width: 430px) {
     margin-left: -160px;
   }
 `;
@@ -62,9 +62,10 @@ export const SVG = styled.img`
   height: 52px;
   top: -33px;
 
-  @media (max-width: 435px) {
+  @media (max-width: 430px) {
     width: 89px;
     height: 35px;
+    top: -22px; 
   }
 `;
 
@@ -97,7 +98,7 @@ export const PreencherNome = styled.input`
     margin-top: 7px;
   }
 
-  @media (max-width: 435px) {
+  @media (max-width: 430px) {
     width: 242px;
   }
 `;
@@ -127,11 +128,8 @@ export const BotaoProximo = styled.button`
     height: 35px;
   }
 
-  @media (max-width: 435px) {
+  @media (max-width: 430px) {
     width: 242px;
-  }
-
-  @media (max-width: 435px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 `;

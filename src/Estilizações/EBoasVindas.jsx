@@ -13,6 +13,11 @@ export const Comprimento = styled.div`
   @media (max-width: 635px) {
     width: 375px;
   }
+
+  @media (max-width: 430px) {
+    width: 282px;
+    height: 332px;
+  }
 `;
 
 export const TituloBoasVindas = styled.h1`
@@ -22,6 +27,10 @@ export const TituloBoasVindas = styled.h1`
   display: flex;
   position: absolute;
   top: -20px;
+
+  @media (max-width: 430px) {
+    font-size: 28px;
+  }
 `;
 
 export const ComprimentoNome = styled.h2`
@@ -29,6 +38,10 @@ export const ComprimentoNome = styled.h2`
   color: white;
   font-weight: 700;
   margin-top: 60px;
+
+  @media (max-width: 430px) {
+    font-size: 24px;
+  }
 `;
 
 export const CorNome = styled.span`
@@ -44,6 +57,12 @@ export const ParagrafoComprimento = styled.h3`
   text-align: center;
   width: 340px;
   height: 84px;
+
+  @media (max-width: 430px) {
+    width: 224px;
+    height: 63px;
+    font-size: 17px;
+  }
 `;
 
 export const BotaoIniciarQuestionamentos = styled.button`
@@ -62,4 +81,8 @@ export const BotaoIniciarQuestionamentos = styled.button`
   text-transform: uppercase;
   margin-top: 80px;
   cursor: pointer;
+
+  @media (max-width: 430px) {
+    margin-top: 40px;
+  }
 `;
