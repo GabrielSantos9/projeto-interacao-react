@@ -15,6 +15,11 @@ export const BarraSuperior = styled.div`
   @media (max-width: 635px) {
     width: 380px;
   }
+
+  @media (max-width: 430px) {
+    width: 0px;
+    height: 0px;
+  }
 `;
 
 export const Circle = styled.div`

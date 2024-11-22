@@ -42,25 +42,25 @@ export const CampoPergunta = styled.fieldset`
   border: 2px solid rgba(31, 31, 31, 62);
   border-radius: 8px;
   width: 800px;
-  height: 314px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: white;
+  margin-bottom: 12px;
 
   @media (max-width: 820px) {
     width: 620px;
-    height: 300px;
   }
 
   @media (max-width: 635px) {
     width: 415px;
-    height: 160px;
     border: 0px;
+    margin-bottom: 45px;
   }
 
   @media (max-width: 430px) {
     width: 248px;
+    margin-bottom: 12px;
   }
 `;
 
@@ -118,33 +118,33 @@ export const BotaoProximo = styled.button`
     opacity: 0.6;
   }
 
-  @media (max-width: 635px) {
-    margin-top: 45px;
-  }
-
   @media (max-width: 430px) {
-    margin-top: 40px;
+    margin-top: 0px;
   }
 `;
 export const Rotulo = styled.label`
   display: flex;
   margin-left: 60px;
   font-size: 18px;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
+  gap: 3px;
 
   @media (max-width: 820px) {
     margin-left: 70px;
     font-size: 16px;
+    gap: 3px;
   }
 
   @media (max-width: 635px) {
     margin-bottom: 25px;
     display: flex;
     margin-left: 0px;
+    gap: 3px;
   }
 
   @media (max-width: 430px) {
     margin-bottom: 28px;
+    gap: 3px;
   }
 `;
 
