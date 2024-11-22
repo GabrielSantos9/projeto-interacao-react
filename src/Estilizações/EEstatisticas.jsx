@@ -27,6 +27,11 @@ export const Circle = styled.div`
   height: 13px;
   border-radius: 50%;
   background-color: white;
+
+  @media (max-width: 430px) {
+    width: 0px;
+    height: 0px;
+  }
 `;
 
 export const ConteudoResultado = styled.div`
@@ -46,6 +51,12 @@ export const ConteudoResultado = styled.div`
     width: 380px;
     height: 596px;
   }
+
+  @media (max-width: 430px) {
+    width: 253px;
+    height: 509px;
+    background-color: #292929;
+  }
 `;
 
 export const TituloResultados = styled.h1`
@@ -57,6 +68,11 @@ export const TituloResultados = styled.h1`
 
   @media (max-width: 635px) {
     margin-top: 25px;
+  }
+
+  @media (max-width: 430px) {
+    margin-top: 0px;
+    font-size: 32px;
   }
 `;
 
@@ -73,6 +89,11 @@ export const Estatisticas = styled.div`
     height: 182px;
     align-items: center;
   }
+
+  @media (max-width: 430px) {
+    margin-top: 20px;
+    margin-bottom: 35px;
+    }
 `;
 
 export const NumeroPerguntas = styled.div`
@@ -90,6 +111,10 @@ export const NumeroPerguntas = styled.div`
     height: 54px;
     margin-bottom: 10px;
     background-color: #1f1f1f;
+  }
+
+  @media (max-width: 430px) {
+    background-color: #292929;
   }
 `;
 
@@ -110,6 +135,12 @@ export const NumeroAcertos = styled.div`
     margin-bottom: 10px;
     background-color: #1f1f1f;
   }
+
+  @media (max-width: 430px) {
+    background-color: #292929;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 `;
 
 export const NumeroErros = styled.div`
@@ -127,6 +158,11 @@ export const NumeroErros = styled.div`
     height: 54px;
     margin-bottom: 10px;
     background-color: #1f1f1f;
+  }
+
+  @media (max-width: 430px) {
+    background-color: #292929;
+    margin-bottom: 0px;
   }
 `;
 
@@ -223,6 +259,10 @@ export const PerguntasRespostas = styled.div`
     width: 327px;
     height: 173px;
   }
+
+  @media (max-width: 430px) {
+    width: 253px;
+  }
 `;
 
 export const TituloPeR = styled.div`
@@ -253,6 +293,10 @@ export const TituloPR = styled.h2`
 export const QuestionamentosERespostas = styled.div`
   display: flex;
   margin-top: 10px;
+
+  @media (max-width: 430px) {
+    margin-top: 14px;
+  }
 `;
 
 export const Questionamento = styled.h3`
@@ -265,6 +309,10 @@ export const Questionamento = styled.h3`
   @media (max-width: 635px) {
     font-size: 14px;
   }
+
+  @media (max-width: 430px) {
+    margin-left: 0px;
+  }
 `;
 
 export const Resposta = styled.span`
@@ -274,6 +322,10 @@ export const Resposta = styled.span`
   font-size: 13px;
   display: flex;
   margin-bottom: 5px;
+
+  @media (max-width: 430px) {
+    margin-left: 0px;
+  }
 `;
 
 export const Negrito = styled.p`

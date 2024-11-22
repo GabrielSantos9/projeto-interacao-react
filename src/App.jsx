@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 body {
-  background-color: hsl(0, 0%, 16%);
+  background-color: #292929;
   font-family: "Montserrat", sans-serif;
 }
 `;

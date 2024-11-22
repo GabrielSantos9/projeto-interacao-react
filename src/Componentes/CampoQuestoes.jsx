@@ -171,7 +171,7 @@ const CampoQuestoes = () => {
                           style={{ display: "flex", flexDirection: "column" }}
                         >
                           <Resposta
-                            style={{ display: "flex", alignItems: "center" }}
+                            style={{ display: "flex", alignItems: "flex-start" }}
                           >
                             {respostas[pergunta.id] !== pergunta.resposta && (
                               <img
