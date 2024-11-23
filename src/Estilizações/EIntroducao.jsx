@@ -1,4 +1,6 @@
 import styled from "styled-components";
+// import {animacaoLetra} from "./Estilizações/animacoes";
+import {animacaoLetra} from "../Estilizações/animacoes";
 
 export const ConteudoIntrodutorio = styled.div`
   display: flex;
@@ -81,7 +83,7 @@ export const Paragrafo = styled.p`
 
 export const CorReact = styled.span`
   color: #61DAFB;
-
+  animation: ${animacaoLetra} 2.5s;
 `;
 
 export const ExemploNome = styled.span`

@@ -121,6 +121,7 @@ export const BotaoProximo = styled.button`
   &:hover {
     box-shadow: 0px 4px 54.4px 0px #8000ff;
     transition: 0.4s;
+    transform: scale(1.03);
   }
 
   @media (max-width: 820px) {

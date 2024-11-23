@@ -98,9 +98,11 @@ export const BotaoProximo = styled.button`
   height: 40px;
   background: linear-gradient(45deg, #8000ff, #4d0099);
   border-radius: 8px;
+
   &:hover {
     box-shadow: 0px 4px 54.4px 0px #8000ff;
     transition: 0.4s;
+    transform: scale(1.03);
   }
 
   font-size: 18px;

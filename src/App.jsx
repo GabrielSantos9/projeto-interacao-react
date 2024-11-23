@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Introducao from "../src/Componentes/Introducao";
 import BoasVindas from "./Componentes/BoasVindas";
-
+import {animacaoTela} from "./Estilizações/animacoes";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -24,6 +24,7 @@ const ConteudoGeral = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: ${animacaoTela} 0.9s;
 `;
 
 const App = () => {

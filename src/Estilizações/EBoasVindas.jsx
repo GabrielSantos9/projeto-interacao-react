@@ -69,9 +69,11 @@ export const BotaoIniciarQuestionamentos = styled.button`
   width: 98px;
   height: 40px;
   background: linear-gradient(80deg, #8000FF, #4D0099);
+
   &:hover {
     box-shadow: 0px 4px 54.4px 0px #8000FF;
     transition: 0.4s;
+    transform: scale(1.03);
   }
 
   color: white;
