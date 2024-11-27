@@ -1,6 +1,5 @@
 import styled from "styled-components";
-// import {animacaoLetra} from "./Estilizações/animacoes";
-import {animacaoLetra} from "../Estilizações/animacoes";
+import { animacaoLetra } from "../Estilizações/animacoes";
 
 export const ConteudoIntrodutorio = styled.div`
   display: flex;

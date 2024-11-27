@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {animacaoPerguntas, animacaoLetra, animacaoBotao} from "../Estilizações/animacoes";
 
 export const FormQuestao = styled.form`
   width: 100%;
@@ -16,6 +17,7 @@ export const PalavraQuestao = styled.h1`
   font-weight: 700;
   margin-bottom: 80px;
   margin-right: 8px;
+  animation: ${animacaoLetra} 2s;
 
   @media (max-width: 635px) {
     margin-bottom: 90px;
@@ -32,6 +34,7 @@ export const NumeroQuestao = styled.span`
   font-size: 40px;
   font-weight: 700;
   display: flex;
+  animation: ${animacaoLetra} 2s;
 
   @media (max-width: 430px) {
     font-size: 32px;
@@ -47,6 +50,7 @@ export const CampoPergunta = styled.fieldset`
   justify-content: center;
   color: white;
   margin-bottom: 12px;
+  animation: ${animacaoPerguntas} 0.9s;
 
   @media (max-width: 820px) {
     width: 620px;
@@ -98,6 +102,7 @@ export const BotaoProximo = styled.button`
   height: 40px;
   background: linear-gradient(45deg, #8000ff, #4d0099);
   border-radius: 8px;
+  animation: ${animacaoBotao} 2s;
 
   &:hover {
     box-shadow: 0px 4px 54.4px 0px #8000ff;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { animacaoTela, animacaoPerguntas } from "../Estilizações/animacoes";
 
 export const BarraSuperior = styled.div`
   width: 740px;
@@ -27,6 +28,7 @@ export const Circle = styled.div`
   height: 13px;
   border-radius: 50%;
   background-color: white;
+  /* animation: ${animacaoPerguntas} 2s; */
 
   @media (max-width: 430px) {
     width: 0px;
@@ -42,6 +44,7 @@ export const ConteudoResultado = styled.div`
   flex-direction: column;
   align-items: center;
   border-radius: 10px 10px 10px 10px;
+  animation: ${animacaoTela} 2s;
 
   @media (max-width: 820px) {
     width: 620px;
@@ -93,7 +96,7 @@ export const Estatisticas = styled.div`
   @media (max-width: 430px) {
     margin-top: 20px;
     margin-bottom: 35px;
-    }
+  }
 `;
 
 export const NumeroPerguntas = styled.div`
@@ -224,6 +227,7 @@ export const PerguntasRespostas = styled.div`
   margin-left: 50px;
   margin-right: 50px;
   flex-direction: column;
+  animation: ${animacaoPerguntas} 2s;
 
   max-height: 300px;
   overflow-y: auto;
@@ -286,7 +290,7 @@ export const TituloPR = styled.h2`
   display: flex;
 
   @media (max-width: 820px) {
-  font-size: 16px;
+    font-size: 16px;
   }
 `;
 

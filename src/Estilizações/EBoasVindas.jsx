@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { animacaoLetra, animacaoTela } from "../Estilizações/animacoes";
 
 export const Comprimento = styled.div`
   width: 524px;
@@ -9,6 +10,7 @@ export const Comprimento = styled.div`
   background-color: hsl(0deg 0% 0% / 29%);
   align-items: center;
   border-radius: 10px;
+  animation: ${animacaoTela} 0.9s;
 
   @media (max-width: 635px) {
     width: 375px;
@@ -45,7 +47,8 @@ export const ComprimentoNome = styled.h2`
 `;
 
 export const CorNome = styled.span`
-  color: #8000FF;
+  color: #8000ff;
+  animation: ${animacaoLetra} 2s;
 `;
 
 export const ParagrafoComprimento = styled.h3`
@@ -68,10 +71,10 @@ export const ParagrafoComprimento = styled.h3`
 export const BotaoIniciarQuestionamentos = styled.button`
   width: 98px;
   height: 40px;
-  background: linear-gradient(80deg, #8000FF, #4D0099);
+  background: linear-gradient(80deg, #8000ff, #4d0099);
 
   &:hover {
-    box-shadow: 0px 4px 54.4px 0px #8000FF;
+    box-shadow: 0px 4px 54.4px 0px #8000ff;
     transition: 0.4s;
     transform: scale(1.03);
   }
