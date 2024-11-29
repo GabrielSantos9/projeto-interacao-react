@@ -144,7 +144,7 @@ const CampoQuestoes = () => {
                 <NumeroAcertos>
                   <TipoEstatisticas>Acertos</TipoEstatisticas>
                   <QuantidadeAcertos>
-                  <CountUp start={0} end={resultadoFinal.acertos} duration={2} delay={1} />
+                  <CountUp start={0} end={resultadoFinal.acertos} duration={1.5} delay={1} />
                   </QuantidadeAcertos>
                 </NumeroAcertos>
                 <NumeroErros>
