@@ -37,6 +37,8 @@ import {
   BotaoReiniciar,
 } from "../Estilizações/eEstatisticas";
 
+import CountUp from "react-countup";
+
 const perguntas = [
   {
     pergunta: "Qual método é utilizado para criar componentes?",
@@ -137,17 +139,17 @@ const CampoQuestoes = () => {
               <Estatisticas>
                 <NumeroPerguntas>
                   <TipoEstatisticas>Perguntas</TipoEstatisticas>
-                  <QuantidadePerguntas>{perguntas.length}</QuantidadePerguntas>
+                  <QuantidadePerguntas><CountUp start={0} end={perguntas.length} duration={2} delay={0.5} /></QuantidadePerguntas>
                 </NumeroPerguntas>
                 <NumeroAcertos>
                   <TipoEstatisticas>Acertos</TipoEstatisticas>
                   <QuantidadeAcertos>
-                    {resultadoFinal.acertos}
+                  <CountUp start={0} end={resultadoFinal.acertos} duration={2} delay={1} />
                   </QuantidadeAcertos>
                 </NumeroAcertos>
                 <NumeroErros>
                   <TipoEstatisticas>Erros</TipoEstatisticas>
-                  <QuantidadeErros>{resultadoFinal.erros}</QuantidadeErros>
+                  <QuantidadeErros><CountUp start={0} end={resultadoFinal.erros} duration={2} delay={1.5} /></QuantidadeErros>
                 </NumeroErros>
               </Estatisticas>
 

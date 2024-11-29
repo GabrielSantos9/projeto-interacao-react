@@ -28,7 +28,6 @@ export const Circle = styled.div`
   height: 13px;
   border-radius: 50%;
   background-color: white;
-  /* animation: ${animacaoPerguntas} 2s; */
 
   @media (max-width: 430px) {
     width: 0px;
