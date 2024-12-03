@@ -43,6 +43,8 @@ export const ComprimentoNome = styled.h2`
 
   @media (max-width: 430px) {
     font-size: 24px;
+    margin-left: 14.5px;
+    margin-right: 14.5px;
   }
 `;
 
