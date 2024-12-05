@@ -51,6 +51,12 @@ export const ComprimentoNome = styled.h2`
 export const CorNome = styled.span`
   color: #8000ff;
   animation: ${animacaoLetra} 2s;
+
+  @media (max-width: 635px) {
+    font-size: 26px;
+    width: 312px;
+    height: 74px;
+  }
 `;
 
 export const ParagrafoComprimento = styled.h3`
